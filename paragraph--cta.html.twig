@@ -1,0 +1,32 @@
+{% set image = content.field_cta_image|render|striptags|trim %}
+{%
+  set classes = [
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    image ? 'cta-with-image',
+  ]
+%}
+{% block paragraph %}
+  {% if image %}
+    <div{{ attributes.addClass(classes) }} style="background-image: url({{ image }})">
+  {% else %}
+    <div{{ attributes.addClass(classes) }}>
+  {% endif %}
+    <div>
+      <div>
+        {% block content %}
+          <h3><a href="{{ parent_url}}">{{ parent_title}}</a></h3>
+          {{ content|without('field_cta_image') }}
+        {% endblock %}
+        {#
+        /**
+         * Links don't appear as required in custom view modes, so add "Learn more" manually.
+         * Ref: https://www.drupal.org/node/2662898
+         */
+        #}
+        <ul class="links inline"><li class="node-readmore"><a href="{{ parent_url }}">{{ 'Read more'|trans }}</a></li></ul>
+      </div>
+    </div>
+  </div>
+{% endblock paragraph %}

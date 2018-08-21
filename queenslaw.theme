@@ -1,0 +1,220 @@
+<?php
+
+use Drupal\Component\Utility\Html;
+
+/**
+ * Implements theme_preprocess_html().
+ *
+ * Add a body class indicating whether this is the main site or a subsite.
+ */
+function queenslaw_preprocess_html(&$variables) {
+  $main_site_hosts = [
+    'law.queensu.ca',
+    'law.queensu.jumphost.ca',
+    'local.law.queensu.ca',
+  ];
+  $host = $_SERVER['HTTP_HOST'];
+  $host_meta_class = 'queenslaw-sub-site';
+  if (in_array($host, $main_site_hosts)) $host_meta_class = 'queenslaw-main-site';
+  $variables['attributes']['class'][] = $host_meta_class;
+  $host_class = str_replace('.', '-', $host);
+  $variables['attributes']['class'][] = $host_class;
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function queenslaw_theme_suggestions_image_formatter_alter(array &$suggestions, array $variables) {
+  $entity = $variables['item']->getEntity();
+  $field_name = $variables['item']->getParent()->getName();
+  $suggestions[] = 'image_formatter__' . $field_name;
+  $suggestions[] = 'image_formatter__' . $entity->getEntityTypeId() . '__' . $field_name;
+  $suggestions[] = 'image_formatter__' . $entity->getEntityTypeId() . '__' . $entity->bundle() . '__' . $field_name;
+}
+
+/**
+ * Implements template_preprocess_node().
+ *
+ * Set the header level and determine whether to link the title based on the node type.
+ * Move category fields to the "category" variable.
+ * Add attributes based on the title.
+ */
+function queenslaw_preprocess_node(&$variables) {
+  $date = $variables['node']->getCreatedTime();
+  $variables['date'] = \Drupal::service('date.formatter')->format($date, 'date_only');
+  $type = $variables['node']->getType();
+  $view_mode = $variables['view_mode'];
+  $variables['display_header'] = TRUE;
+  $variables['header_level'] = 3;
+  $variables['header_linked'] = TRUE;
+  $variables['category'] = FALSE;
+  $variables['bundle'] = FALSE;
+  if (in_array($type, ['feature'])) {
+    $variables['header_level'] = 2;
+    $variables['header_linked'] = FALSE;
+  }
+  if (in_array($type, ['person'])) {
+    $variables['header_level'] = 2;
+    // don't link the title if the body is empty
+    if (!_queenslaw_person_content($variables['node'])) $variables['header_linked'] = FALSE;
+  }
+  if (in_array($type, ['notification', 'publication'])) $variables['header_linked'] = FALSE;
+  if (in_array($view_mode, ['detail'])) {
+    if (in_array($type, ['course', 'page'])) $variables['display_header'] = FALSE;
+    else {
+      $variables['header_linked'] = FALSE;
+      if (in_array($type, ['event', 'speaker_event', 'story'])) {
+        $variables['header_level'] = 1;
+        if (in_array($type, ['story'])) $variables['display_submitted'] = TRUE;
+      }
+      else $variables['header_level'] = 4;
+    }
+  }
+  if (in_array($view_mode, ['syndicated'])) {
+    $variables['header_level'] = 4;
+    $variables['header_linked'] = FALSE;
+  }
+  if (in_array($view_mode, ['cta'])) {
+    $variables['display_header'] = FALSE;
+  }
+  if (in_array($view_mode, ['full'])) {
+    if (in_array($type, ['story'])) $variables['display_submitted'] = FALSE;
+  }
+  $variables['queenslaw_node_title'] = $variables['node']->getTitle();
+  $variables['attributes'] = _queenslaw_title_attributes($variables, 'queenslaw_node_title', $type);
+}
+/**
+ * Implements hook_preprocess_links().
+ *
+ * For person teasers, if the body is empty remove the read more link, otherwise change
+ * the text to "Full Bio".
+ */
+function queenslaw_preprocess_links(&$variables) {
+  if (isset($variables['links']) && (isset($variables['links']['node-readmore'])) && (isset($variables['links']['node-readmore']['link'])) && (isset($variables['links']['node-readmore']['link']['#url']))) {
+    if ($entity = $variables['links']['node-readmore']['link']['#url']->getOption('entity')) {
+      if (($bundle = $entity->bundle()) && ($bundle == 'person')) {
+        if (!_queenslaw_person_content($entity)) $variables['links']['node-readmore'] = [];
+        else $variables['links']['node-readmore']['link']['#title'] = t('Full Bio');
+      }
+    }
+  }
+}
+/**
+ * Implements template_preprocess_paragraph().
+ *
+ * Make the parent (node) title and url available to the paragraph template so that the
+ * linked can appear after the CTA image.
+ */
+function queenslaw_preprocess_paragraph__cta(&$variables) {
+  if (isset($variables['paragraph']) && ($parent = $variables['paragraph']->getParentEntity())) {
+    $variables['parent_title'] = $parent->getTitle();
+    $variables['parent_url'] = $parent->toUrl()->toString();
+  }
+}
+/**
+ * Implements template_preprocess_field().
+ *
+ * Set the header level for fields.
+ */
+function queenslaw_preprocess_field(&$variables) {
+  $variables['header_level'] = 3;
+  $header_levels = [
+    'achievement' => 2,
+    'publication' => 2,
+  ];
+  if (isset($variables['element']) && ($variables['element']['#field_name'])) {
+    $field_name = $variables['element']['#field_name'];
+    if (strpos($field_name, 'field_') === 0) $field_name = substr($variables['element']['#field_name'], strlen('field_'));
+    if (array_key_exists($field_name, $header_levels)) $variables['header_level'] = $header_levels[$field_name];
+  }
+}
+/**
+ * Implements template_preprocess_field().
+ *
+ * Preprocess the social media links field to add unique classes to each link.
+ */
+function queenslaw_preprocess_field__field_social_media(&$variables) {
+  if (isset($variables['items'])) {
+    foreach ($variables['items'] as $index => $item) {
+      if (isset($item['content']) && (isset($item['content']['#title']))) {
+        $class = 'social-media-' . Html::getID($item['content']['#title']);
+        $variables['items'][$index]['content']['#options']['attributes']['class'][] = $class;
+      }
+    }
+  }
+}
+/**
+ * Implements hook_preprocess_breadcrumb().
+ *
+ * Easy Breadcrumb shows archive month pages as "... > [Archive] > Archive", change the
+ * last item to the human readable month name.
+ */
+function queenslaw_preprocess_breadcrumb(&$variables) {
+  $path = \Drupal::request()->getpathInfo();
+  $path_parts = explode('/', $path);
+  $path_parts = array_reverse($path_parts);
+  if ((count($path_parts) >= 2) && ($path_parts[0] == 'content') && ($path_parts[1] == 'search')) {
+    $discard = array_pop($variables['breadcrumb']);
+    if (isset($_GET['keys']) && ($_GET['keys'] != '')) $variables['breadcrumb'][] = ['text' => t('Search Results')];
+  }
+}
+/**
+ * Generate an id and classes based on a title.
+ */
+function _queenslaw_title_attributes($variables, $title_field, $type) {
+  if (isset($variables['attributes'])) $attributes = $variables['attributes'];
+  else $attributes = [];
+  if (!isset($attributes['class'])) $attributes['class'] = [];
+  $attributes['class'][] = $type;
+  if (isset($variables[$title_field])) {
+    $title = strip_tags($variables[$title_field]);
+    $title = trim($title);
+    if ($title != '') {
+      $id = $type . '-' . Html::getID($title);
+      $attributes['id'] = $id;
+      $attributes['class'][] = $id;
+    }
+  }
+  return $attributes;
+}
+/**
+ * Return true if a person has a biography or any contact information.
+ */
+function _queenslaw_person_content($node) {
+  $return = FALSE;
+  $fields = [
+    'body',
+    'field_email',
+    'field_room',
+    'field_social_media',
+    'field_telephone',
+  ];
+  foreach ($fields as $field) {
+    if ($node->hasField($field)) {
+      if (!$node->get($field)->isEmpty()) {
+        $return = TRUE;
+        break;
+      }
+    }
+  }
+  return $return;
+}
+/**
+ * Implements hook_preprocess_block_HOOK().
+ *
+ * The pi_base theme replaces the SVG logo with a PNG—switch it back.
+ *
+ */
+// replace the .svg logo with .png; see https://www.drupal.org/node/2472127
+function queenslaw_preprocess_block__system_branding_block(&$variables) {
+  $main_site_hosts = [
+    'law.queensu.ca',
+    'law.queensu.jumphost.ca',
+    'local.law.queensu.ca',
+  ];
+  $host = $_SERVER['HTTP_HOST'];
+  if (($variables['content']['site_logo']['#access']) && ($variables['content']['site_logo']['#uri'])) {
+    if (in_array($host, $main_site_hosts)) $variables['site_logo'] = str_replace('.png', '.svg', $variables['content']['site_logo']['#uri']);
+    else $variables['site_logo'] = str_replace('.svg', '.png', $variables['content']['site_logo']['#uri']);
+  }
+}

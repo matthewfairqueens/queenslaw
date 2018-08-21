@@ -1,0 +1,2280 @@
+$one-third: 33.33333333%;
+$two-thirds: 66.66666667%;
+$default-block-padding: 0 20px;
+$min-width: 960px;
+$max-width: 1440px;
+$font-stack: myriad-pro, Arial, Helvetica, sans-serif;
+$font-size: 16px;
+$font-weight: 400;
+$bold-font-weight: 600;
+$black: #000;
+$white: #fff;
+$grey: #999;
+$dark-grey: #333;
+$medium-grey: #666;
+$light-grey: #ccc;
+$lighter-grey: #ddd;
+$lightest-grey: #eee;
+$red: #9d1939;
+$blue: #11335d;
+$yellow: #eebd31;
+$orange: #de7736;
+
+@mixin border-radius($border-radius) {
+  -webkit-border-radius: $border-radius;
+  -moz-border-radius: $border-radius;
+  -ms-border-radius: $border-radius;
+  border-radius: $border-radius;
+}
+@mixin break-inside($break-inside) {
+  -webkit-column-break-inside: $break-inside;
+  page-break-inside: $break-inside;
+  break-inside: $break-inside;
+}
+@mixin clearfix() {
+  content: '.';
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+body {
+  background-color: $black;
+  min-width: $min-width;
+  overflow-x: hidden;
+  font-family: $font-stack;
+  font-size: $font-size;
+  color: $grey;
+}
+figure {
+  margin: 0;
+}
+strong {
+  font-weight: $bold-font-weight;
+}
+a {
+  font-weight: $font-weight;
+  text-decoration: none;
+  color: $grey;
+}
+.form-item,
+.form-actions {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.container {
+  background-color: $white;
+  color: $dark-grey;
+}
+#superheader:after {
+  @include clearfix();
+}
+#superheader {
+  background-color: $lighter-grey;
+  .block-backtoqueensuniversityfacultyoflaw {
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: $default-block-padding;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    min-width: $min-width;
+    text-align: right;
+    > div {
+      padding: $default-block-padding;
+    }
+    a {
+      font-weight: $bold-font-weight;
+      color: $red;
+    }
+    a:before {
+      content: '\f137';
+      margin-right: 0.5em;
+      font-family: FontAwesome;
+      font-size: 0.75em;
+    }
+  }
+  .block-queenslaw-utility-bar {
+    background-color: $dark-grey;
+    padding: 0 40px 8px 40px;
+    color: $white;
+    .queens-wordmark {
+      margin-left: 0;
+      background: url(../queens-university.png) center center / 240px auto no-repeat scroll padding-box padding-box transparent;
+      width: 240px;
+    }
+    button {
+      margin-top: 2px;
+      background-image: none;
+      background-color: $white;
+      padding: 4px 12px;
+      font-size: 0.75em;
+      text-transform: none;
+      color: $dark_grey;
+    }
+    button:before {
+      content: '\f002';
+      margin-right: 1em;
+      font-family: FontAwesome;
+    }
+    span.ext {
+      display: none;
+    }
+  }
+  .block-views-block-notifications-block,
+  .block-queenslaw-notifications {
+    background-color: $red;
+    padding: 16px 40px;
+    line-height: 1.5;
+    color: $white;
+    .views-row,
+    .queenslaw-notification {
+      display: table;
+      background: url(../notification-item-bg.png) left center / 39px auto no-repeat scroll padding-box padding-box transparent;
+      padding-left: 64px;
+      height: 39px;
+        article {
+        display: table-cell;
+        vertical-align: middle;
+        * {
+          display: inline;
+        }
+        h3 {
+          margin-right: 0.75em;
+          border-right: 1px solid $white;
+          padding-right: 0.5em;
+          font-weight: $bold-font-weight;
+          text-transform: uppercase;
+          color: $yellow;
+        }
+        a {
+          text-decoration: underline;
+          color: $white;
+        }
+        .field--name-field-link,
+        .field-field_link {
+          margin-left: 0.5em;
+        }
+      }
+      + .views-row,
+      + .queenslaw-notification {
+        margin-top: 24px;
+      }
+    }
+    span.ext {
+      display: none;
+    }
+  }
+  .block-queenslaw-notifications .queenslaw-notification article h3 {
+    margin-right: 0.5em;
+    padding-right: 0.75em;
+  }
+}
+#header:after {
+  @include clearfix();
+}
+#header {
+  position: relative;
+  display: table;
+  border-bottom: 1px solid $light-grey;
+  width: 100%;
+  a {
+    color: $dark-grey;
+  }
+  span.ext {
+    display: none;
+  }
+  > div {
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: $default-block-padding;
+    min-width: $min-width;
+  }
+  .menu {
+    li {
+      display: inline-block;
+      + li {
+        margin-left: 0.5em;
+      }
+    }
+  }
+  .submenu {
+    display: none;
+  }
+}
+body.front #header {
+  border-bottom: none;
+}
+body.queenslaw-sub-site #header {
+  border-bottom: none;
+  background-color: $red;
+  color: $white;
+  a {
+    color: $white;
+  }
+  .submenu a {
+    color: $red;
+  }
+}
+#branding {
+  position: relative;
+  display: table-cell;
+  box-sizing: border-box;
+  padding: $default-block-padding;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  vertical-align: middle;
+  text-align: right;
+  > div {
+    display: table;
+    width: 100%;
+  }
+  .block {
+    display: table-cell;
+    box-sizing: border-box;
+    vertical-align: middle;
+    svg {
+      display: block;
+      height: 48px;
+      width: auto;
+    }
+  }
+  .block-queensuniversity {
+    border-right: 2px solid $blue;
+    padding-right: 20px;
+  }
+  .block-logo svg {
+    height: 44px;
+    padding-top: 14px;
+  }
+  div + .block-logo {
+    padding-left: 20px;
+  }
+  a {
+    display: block;
+    font-weight: 600;
+  }
+}
+body.queenslaw-main-site #branding .block-logo svg {
+  height: 30px;
+  padding-top: 0;
+}
+body.queenslaw-sub-site #branding .block-queensuniversity {
+  border-right-color: $white;
+}
+#header .header-content {
+  display: table-cell;
+  padding: $default-block-padding;
+  padding-top: 56px;
+  width: 100%;
+  vertical-align: bottom;
+  text-align: right;
+}
+#block-mainnavigation {
+  float: right;
+  font-size: 1.25em;
+  text-transform: uppercase;
+  a {
+    display: block;
+    padding-bottom: 24px;
+    font-weight: $bold-font-weight;
+  }
+  .menu-item--active-trail a,
+  a:hover {
+    border-bottom: 12px solid $light-grey;
+    padding-bottom: 12px;
+  }
+  .submenu {
+    display: none;
+    li {
+      display: block;
+      margin-left: 0;
+      border-top: 1px solid $light-grey;
+      + li {
+        margin-left: 0;
+      }
+    }
+    .menu-item-content {
+      display: table;
+      @include break-inside(avoid);
+      > * {
+        display: table-row; /* work around Chrome ignoring "break-inside" */
+      }
+    }
+    p,
+    .submenu {
+      margin-bottom: 16px;
+      font-size: 0.9em;
+      text-transform: none;
+    }
+    p {
+      margin-bottom: 4px;
+    }
+    a,
+    a:hover {
+      border-bottom: 0;
+      padding-bottom: 0;
+      color: $red;
+    }
+    .submenu li.menu-item--expanded a:after {
+      content: '\f138';
+      margin-left: 0.5em;
+      font-family: FontAwesome;
+      font-size: 0.75em;
+    }
+    .submenu {
+      margin-left: 12px;
+      li {
+        border-top: none;
+      }
+      a {
+        font-weight: $font-weight;
+      }
+      .submenu {
+        display: none;
+      }
+    }
+  }
+  .submenu-top {
+    position: absolute;
+    left: 0;
+    box-sizing: border-box;
+    background-color: $white;
+    padding: 20px 80px 16px 40px;
+    column-count: 3;
+    column-gap: 20px;
+    line-height: 1.75;
+    text-align: left;
+    z-index: 101;
+  }
+  .submenu-top .submenu,
+  .submenu-active .submenu-top {
+    display: block;
+  }
+  .submenu-close {
+    position: absolute;
+    right: 40px;
+    top: 20px;
+    display: block;
+    width: 23px;
+    height: 23px;
+    span {
+      display: block;
+      border: 2px solid $dark-grey;
+      width: 19px;
+      height: 19px;
+      overflow: hidden;
+      white-space: nowrap;
+      color: $dark-grey;
+      @include border-radius(50%);
+    }
+    span:before {
+      position: relative;
+      top: -9px;
+      left: 3px;
+      content: '\f106';
+      margin-right: 20px;
+      font-family: FontAwesome;
+    }
+  }
+}
+body.queenslaw-sub-site #block-mainnavigation {
+  .menu-item--active-trail a,
+  a:hover {
+    border-bottom-color: $white;
+  }
+}
+.block-searchform {
+  position: relative;
+  top: -4px;
+  margin-left: 1em;
+  width: 200px;
+  float: right;
+  text-align: right;
+}
+.block-searchform,
+.view-people .views-exposed {
+  form {
+    position: relative;
+    margin-bottom: 0;
+    div {
+      display: inline-block;
+    }
+    .form-item {
+      margin-bottom: 0;
+    }
+    .form-search,
+    .form-text {
+      box-sizing: border-box;
+      border: none;
+      background-color: $light-grey;
+      padding: 6px 24px 4px 8px;
+      width: 198px;
+      font-family: $font-stack;
+      font-size: $font-size;
+      line-height: 1.25;
+      color: $dark-grey;
+    }
+    .form-actions {
+      position: absolute;
+      left: 178px;
+      top: 6px;
+      margin-top: 0;
+    }
+    .form-actions:before {
+      content: '\f002';
+      display: block;
+      font-family: FontAwesome;
+    }
+    input.form-submit {
+      position: absolute;
+      left: 0;
+      top: 0;
+      border: none;
+      background-color: transparent;
+      background-image: none;
+      padding: 0;
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+      text-indent: 40px;
+    }
+  }
+}
+#block-secondarynavigation {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  font-size: 1.125em;
+  text-align: right;
+  .menu .menu {
+    display: none;
+  }
+  .menu-item--active-trail a,
+  a:hover {
+    text-decoration: underline;
+  }
+}
+#subheader {
+  position: relative;
+  z-index: 1;
+  clear: both;
+  background-color: $light-grey;
+  > div {
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 12px 20px;
+    min-width: $min-width;
+  }
+  a {
+    font-weight: $bold-font-weight;
+    color: $dark-grey;
+  }
+  .block-queenslaw-breadcrumbs {
+    padding: $default-block-padding;
+    li {
+      display: inline;
+      + li:before {
+        content: '/';
+        margin: 0 0.5em;
+      }
+    }
+    li:first-child a,
+    li:first-child span.no-link {
+      margin-left: 0;
+    }
+  }
+}
+body.submenu-visible #subheader {
+  position: absolute;
+  right: 0;
+  left: 0;
+}
+#subheader .quick-nav-active + .block-queenslaw-breadcrumbs {
+  padding-left: 0;
+}
+#block-subsubsection-navigation + .block-queenslaw-breadcrumbs ol {
+  padding-left: 20px;
+}
+#block-subsubsection-navigation {
+  position: absolute;
+  top: -1px;
+  left: 0;
+  border-top: 1px solid $red;
+  background-color: $white;
+  > h2 {
+    position: relative;
+    background-color: $red;
+    padding: 12px 0 12px 40px;
+    width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    font-weight: $bold-font-weight;
+    color: $white;
+    .quick-nav-toggle {
+      position: absolute;
+      top: 4px;
+      left: 12px;
+      width: 40px;
+      overflow: hidden;
+      white-space: nowrap;
+      font-size: 1.75em;
+      font-weight: $font-weight;
+      color: $white;
+    }
+    .quick-nav-toggle:before {
+      content: '\f101';
+      font-family: FontAwesome;
+      margin-right: 40px;
+    }
+  }
+  > ul {
+    display: none;
+    padding: 8px 40px;
+    line-height: 1.75;
+  }
+  ul ul {
+    padding-left: 24px;
+    ul {
+      font-size: 0.875em;
+    }
+    a {
+      font-weight: $font-weight;
+    }
+  }
+  a {
+    color: $red;
+  }
+}
+body.submenu-visible #block-subsubsection-navigation {
+  top: 0;
+  border-top: none;
+}
+#block-subsubsection-navigation.quick-nav-active {
+  > h2 {
+    padding-right: 40px;
+    width: auto;
+    .quick-nav-toggle:before {
+      content: '\f100';
+    }
+  }
+  > ul {
+    display: block;
+  }
+}
+#supercontent .block-views-block-features-block,
+#supercontent .block-views-block-stories-front-block,
+#main .block-views-block-events-block,
+#main .block-views-block-events-block-alumni,
+#supercontent .block-views-block-events-front-block,
+#main .block-views-block-speaker-events-block,
+#main .block-views-block-speaker-events-front-block {
+  background-color: $blue;
+  color: $white;
+  article {
+    position: relative;
+  }
+  h2 {
+    margin-bottom: 8px;
+    font-size: 1.5em;
+    font-weight: $bold-font-weight;
+    line-height: 1.125;
+    text-transform: uppercase;
+  }
+  a {
+    color: $white;
+  }
+  > div {
+    position: relative;
+    .views-row {
+      width: 100%;
+      + .views-row {
+        display: none;
+      }
+    }
+    .fields {
+      box-sizing: border-box;
+      margin: 0 auto;
+      padding: 48px 0 20px 0;
+      font-size: 1.125em;
+      line-height: 1.5;
+      > div {
+        display: table;
+        padding-left: $two-thirds;
+        height: 332px;
+        > div {
+          display: table-cell;
+          position: relative;
+          padding: 0 40px;
+          vertical-align: bottom;
+        }
+      }
+    }
+  }
+  .feature-image,
+  .teaser-image {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: $one-third;
+    bottom: 0;
+    left: 0;
+    background-position: left center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-origin: padding-box;
+    background-clip: padding-box;
+    background-color: transparent;
+  }
+}
+#main .block-views-block-speaker-events-front-block { 
+  h2 {
+    margin: 0;
+    background-color: $yellow;
+    padding: 12px 20px;
+  }
+}
+.align-left {
+  margin: 0 20px 16px 0;
+}
+.align-right {
+  margin: 0 0 16px 20px;
+}
+#supercontent .block-views-block-stories-front-block,
+#main .block-views-block-events-block,
+#main .block-views-block-events-block-alumni,
+#supercontent .block-views-block-events-front-block,
+#main .block-views-block-speaker-events-block,
+#main .block-views-block-speaker-events-front-block {
+  background-color: $yellow;
+  color: $black;
+  h3 {
+    margin-bottom: 8px;
+    font-size: 1.25em;
+    font-weight: $bold-font-weight;
+    line-height: 1.125;
+  }
+  a {
+    color: $black;
+  }
+  > div {
+    .views-row + .views-row {
+      display: block;
+    }
+    .fields {
+      > div {
+        padding-right: $two-thirds;
+        padding-left: 0;
+      }
+    }
+  }
+  .teaser-image {
+    right: 0;
+    left: $one-third;
+  }
+  .field--name-field-date {
+    position: absolute;
+    left: 40px;
+    top: -92px;
+    font-size: 0.875em;
+    line-height: 1;
+    text-align: center;
+    text-transform: uppercase;
+    span.day {
+      display: block;
+      position: relative;
+      top: -8px;
+      font-size: 5em;
+      font-weight: $bold-font-weight;
+    }
+  }
+}
+#main .block-views-block-events-block,
+#main .block-views-block-events-block-alumni,
+#supercontent .block-views-block-events-front-block,
+#main .block-views-block-speaker-events-block,
+#main .block-views-block-speaker-events-front-block {
+  > div .fields > div {
+    padding-top: 72px;
+    height: 260px;
+  }
+}
+#supercontent .block-views-block-events-front-block {
+  background-color: $black;
+  width: 50%;
+  float: right;
+  color: $white;
+  h3 {
+    font-weight: $bold-font-weight;
+    text-transform: uppercase;
+    a {
+      font-weight: $bold-font-weight;
+    }
+  }
+  a {
+    color: $white;
+  }
+  > div {
+    .views-row + .views-row {
+      display: none;
+    }
+    .fields {
+      position: relative;
+      background-color: rgba(0, 0, 0, 0.5);
+      max-height: 400px;
+      overflow: hidden;
+      > div {
+        padding-right: 0;
+      }
+    }
+  }
+  .teaser-image {
+    left: 0;
+  }
+}
+#main .block-views-block-speaker-events-front-block {
+  background-color: transparent;
+  color: $dark-grey;
+  h3 {
+    text-transform: uppercase;
+  }
+  a {
+    color: $dark-grey;
+  }
+  > div {
+    .views-row + .views-row {
+      display: none;
+    }
+    .fields {
+      > div {
+        padding-right: 0;
+        padding-left: 50%;
+      }
+    }
+  }
+  .teaser-image {
+    right: 50%;
+    left: 0;
+  }
+}
+#main .block-views-block-events-block .views-row:nth-child(even),
+#main .block-views-block-events-block-alumni .views-row:nth-child(even),
+#main .block-views-block-speaker-events-block .views-row:nth-child(even) {
+  .fields > div {
+    padding-right: 0;
+    padding-left: $two-thirds;
+  }
+  .teaser-image {
+    right: $one-third;
+    left: 0;
+  }
+}
+.queenslaw-teasers,
+.block-views-block-stories-front-block,
+.block-views-block-events-block,
+.block-views-block-events-block-alumni,
+.block-views-block-events-front-block,
+.block-views-block-speaker-events-block,
+.block-views-block-speaker-events-front-block,
+.block-views-block-ctas-block {
+  ul.links.inline {
+    margin-top: 8px;
+    font-size: 1.5em;
+    line-height: 1;
+    li.node-readmore a {
+      display: block;
+      margin: 0 0 0 auto;
+      border: 2px solid $dark-grey;
+      width: 20px;
+      height: 20px;
+      overflow: hidden;
+      white-space: nowrap;
+      color: $dark-grey;
+      @include border-radius(50%);
+    }
+    li.node-readmore a:before {
+      position: relative;
+      top: -6px;
+      left: 2px;
+      content: '+';
+      margin-right: 20px;
+    }
+  }
+}
+#main .queenslaw-teasers,
+#supercontent .block-views-block-ctas-block,
+#supercontent .block-views-block-events-front-block,
+#main .block-views-block-speaker-events-front-block {
+  ul.links.inline {
+    margin-bottom: 0;
+    li.node-readmore a {
+      border-color: $white;
+    }
+    li.node-readmore a:before {
+      top: -5px;
+      left: 3px;
+    }
+  }
+}
+#main .block-views .view-people,
+body.landing-page-directory #main .view-people,
+#main .block-queenslaw-people {
+  ul.links.inline {
+    margin-bottom: 0;
+  }
+}
+#supercontent .block-views-block-events-front-block,
+#main .block-views-block-speaker-events-front-block {
+  ul.links.inline {
+    display: none;
+  }
+}
+#supercontent .features-dynamic,
+#supercontent .events-dynamic,
+#main .speaker-events-dynamic {
+  position: relative;
+  .views-row {
+    display: block;
+    .node__content {
+      padding-bottom: 24px;
+    }
+  }
+  .skip-nav {
+    position: absolute;
+    z-index: 100;
+    right: 40px;
+    bottom: 20px;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    li {
+      display: inline-block;
+      margin-left: 0.25em;
+    }
+    a {
+      display: block;
+      border: 2px solid $white;
+      width: 19px;
+      height: 19px;
+      text-indent: 19px;
+      overflow: hidden;
+      white-space: nowrap;
+      @include border-radius(50%);
+    }
+    li.active a {
+      background-color: $white;
+    }
+    li:before {
+      content: '';
+      margin: 0;
+    }
+  }
+}
+#main .speaker-events-dynamic {
+  .skip-nav {
+    a {
+      border-color: $red;
+    }
+    li.active a {
+      background-color: $red;
+    }
+  }
+}
+#supercontent:after {
+  @include clearfix();
+}
+#supercontent {
+  background-color: $yellow;
+}
+.block-views-block-page-title-block,
+.block-pagetitle {
+  .page-title {
+    position: relative;
+    > .fields {
+      box-sizing: border-box;
+      padding: 48px 0 20px 0;
+      font-size: 1.125em;
+      line-height: 1.5;
+      > div > div {
+        padding: 0 40px;
+      }
+    }
+  }
+  .page-title-with-image {
+    > .fields {
+      > div {
+        display: table;
+        padding-right: $two-thirds;
+        height: 332px;
+        > div {
+          display: table-cell;
+          vertical-align: bottom;
+        }
+      }
+    }
+  }
+  .page-title-with-image-caption > .fields > div {
+    height: 272px;
+  }
+  h1 {
+    margin-bottom: 4px;
+    font-size: 2em;
+    font-weight: $bold-font-weight;
+    text-transform: uppercase;
+    line-height: 1.125;
+  }
+  .views-field-field-degree {
+    li {
+      display: inline-block;
+      margin-right: 0.25em;
+    }
+    li:after {
+      content: ',';
+    }
+    li:last-child:after {
+      content: '';
+    }
+  }
+  .page-title-image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: $one-third;
+    background-position: left center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-origin: padding-box;
+    background-clip: padding-box;
+    background-color: transparent;
+  }
+  .page-title-image-caption {
+    margin-right: $two-thirds;
+    box-sizing: border-box;
+    .caption {
+      box-sizing: border-box;
+      padding: 16px 20px 4px 40px;
+      min-height: 60px;
+      font-size: 0.875em;
+      line-height: 1.5;
+      text-align: right;
+    }
+  }
+}
+.block-pagetitle {
+  font-size: 1.125em;
+  line-height: 1.5;
+  h1 {
+    box-sizing: border-box;
+    padding: 48px 40px 20px 40px;
+  }
+}
+.block-views-block-hero-images-block {
+  background-color: $white;
+  .view-hero-images {
+    position: relative;
+    padding-bottom: 36px;
+  }
+  .view-body li + li {
+    display: none;
+  }
+  .image {
+    max-height: 480px;
+    overflow: hidden;
+    > div {
+      box-sizing: border-box;
+      padding-bottom: $one-third;
+      height: 0;
+      background-position: 50% 50%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: scroll;
+      background-origin: padding-box;
+      background-clip: padding-box;
+      background-color: transparent;
+    }
+  }
+  .caption {
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 12px 40px;
+    min-width: $min-width;
+    font-size: 0.875em;
+    text-align: right;
+  }
+  .hero-images-dynamic {
+    .view-body {
+      li {
+        width: 100%;
+        + li {
+          display: block;
+        }
+      }
+    }
+    .step-nav {
+      position: absolute;
+      z-index: 100;
+      right: 40px;
+      bottom: 6px;
+      li {
+        display: inline-block;
+        margin-left: 0.5em;
+      }
+      a {
+        display: block;
+        border: 2px solid $red;
+        width: 19px;
+        height: 19px;
+        overflow: hidden;
+        white-space: nowrap;
+        font-size: 1.125em;
+        color: $red;
+        @include border-radius(50%);
+      }
+      a:before {
+        position: relative;
+        left: 5px;
+        content: '\f104';
+        margin-right: 20px;
+        font-family: FontAwesome;
+        font-weight: bold;
+      }
+      li.next a:before {
+        left: 7px;
+        content: '\f105';
+      }
+    }
+  }
+  .hero-images-dynamic-with-caption {
+    padding-bottom: 0;
+    .caption {
+      padding-right: 120px;
+    }
+  }
+}
+.content-container {
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: $default-block-padding;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  min-width: $min-width;
+  max-width: $max-width;
+  line-height: 1.75;
+  a {
+    color: $red;
+  }
+}
+body.queenslaw-main-site.front .content-container,
+body.queenslaw-main-site.landing-page-events .content-container,
+body.queenslaw-main-site.path-alumni-alumni-events .content-container,
+body.has-queenslaw-alternate-teasers .content-container {
+  padding: 0;
+  max-width: none;
+}
+.content-container:after {
+  @include clearfix();
+}
+#main {
+  box-sizing: border-box;
+  padding: $default-block-padding;
+  h2 {
+    font-weight: $bold-font-weight;
+    a {
+      font-weight: $bold-font-weight;
+      color: $dark-grey;
+    }
+  }
+  h3 {
+    font-weight: $bold-font-weight;
+    a {
+      font-weight: $bold-font-weight;
+      color: $dark-grey;
+    }
+  }
+  .queenslaw-teasers article + ul {
+    padding-left: 0;
+  }
+  ul {
+    > li {
+      list-style-type: none;
+    }
+    > li:before {
+      content: '\f105';
+      margin: 0 0.5em 0 -1em;
+      font-family: FontAwesome;
+    }
+  }
+  nav ul > li:before,
+  ul.inline > li:before,
+  .queenslaw-teasers article + ul > li:before {
+    content: '';
+    margin: 0;
+  }
+  figure {
+    margin-bottom: 24px;
+    figcaption {
+      border-bottom: 1px solid $light-grey;
+      padding: 8px 0 12px 0;
+      font-size: 0.875em;
+    }
+  }
+  img {
+    max-width: 100%;
+  }
+  .views-row-set {
+    margin-bottom: 24px;
+  }
+  .node--view-mode-full,
+  .views-element-container {
+    table {
+      margin-bottom: 24px;
+      width: 100%;
+      border-collapse: collapse;
+      p {
+        margin: 0;
+      }
+      ul {
+        padding: 0;
+        margin: 0;
+      }
+      li {
+        list-style-type: none;
+      }
+    }
+  }
+  form.search-form label {
+    display: none;
+  }
+  .view-body div.pager {
+    clear: both;
+    padding-top: 24px;
+  }
+  nav.pager {
+    margin: 24px 0;
+    border-width: 1px 0;
+    border-style: solid;
+    border-color: $light-grey;
+    padding: 4px 0;
+    font-size: 0.875em;
+    text-align: center;
+    ul {
+      padding-left: 0;
+      font-size: 18px;
+    }
+    li:first-child {
+      float: left;
+      width: 50px;
+    }
+    li:last-child {
+      float: right;
+      width: 50px;
+    }
+    li.is-active:first-child,
+    li.is-active:last-child {
+      float: none;
+    }
+    li.is-active a {
+      text-decoration: underline;
+    }
+  }
+  .view-recent-publications li * {
+    display: inline;
+  }
+}
+body.sidebar-first #main {
+  width: $two-thirds;
+  float: left;
+}
+body.queenslaw-main-site.front #main,
+body.queenslaw-main-site.landing-page-events #main,
+body.queenslaw-main-site.path-alumni-alumni-events #main,
+body.has-queenslaw-alternate-teasers #main {
+  padding: 0;
+  .views-row-set {
+    margin-bottom: 0;
+  }
+}
+body.page-node-type-event.sidebar-first #main,
+body.page-node-type-speaker-event.sidebar-first #main,
+body.page-node-type-story.sidebar-first #main {
+  float: right;
+}
+body.queenslaw-main-site.front #content {
+  position: relative;
+  clear: both;
+  background: url(../highlights-bg.jpg) center center / cover no-repeat scroll padding-box padding-box $black;
+  height: 760px;
+  color: $white;
+}
+body.queenslaw-main-site.front #block-queenslaw-local-tasks {
+  position: relative;
+  z-index: 1;
+}
+.node--view-mode-full,
+.views-element-container {
+  /* change the font size for tr rather than table so as not to impact caption */
+  table tr {
+    font-size: 0.875em;
+  }
+  thead tr {
+    background-color: $lighter-grey;
+  }
+  tbody tr:nth-child(even) {
+    background-color: $lightest-grey;
+  }
+  th,
+  td {
+    padding: 4px 8px;
+    vertical-align: top;
+  }
+  th {
+    font-weight: $bold-font-weight;
+  }
+}
+.node__meta {
+  margin-bottom: 4px;
+  font-size: 0.875em;
+  * {
+    display: inline;
+  }
+  .bundle:before,
+  .field__item:before {
+    content: '|';
+    margin-right: 0.25em;
+  }
+}
+body.page-node-type-event #sidebar .node__content > .field:not(.field--name-field-subheader),
+body.page-node-type-speaker-event #sidebar .node__content > .field {
+  position: relative;
+  padding-left: 48px;
+  font-size: 1.286em;
+}
+body.page-node-type-event #sidebar .node__content > .field:not(.field--name-field-subheader):before,
+body.page-node-type-speaker-event #sidebar .node__content > .field:before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: '\f073';
+  font-family: FontAwesome;
+  font-size: 1.75em;
+}
+body.page-node-type-story #sidebar .node__content > .field,
+body.page-node-type-story #sidebar footer {
+  font-size: 1.286em;
+}
+#supercontent .block-views-block-ctas-block {
+  background-color: $black;
+  width: 50%;
+  float: left;
+  line-height: 1.5;
+  .views-row {
+    width: 50%;
+    float: left;
+    .paragraph {
+      box-sizing: border-box;
+      position: relative;
+      background-position: center center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: scroll;
+      background-origin: padding-box;
+      background-clip: padding-box;
+      background-color: $red;
+      height: 200px;
+      overflow: hidden;
+      color: #fff;
+      a {
+        color: #fff;
+      }
+      > div > div {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        padding: 20px;
+        h3 {
+          margin: 0;
+          font-weight: $bold-font-weight;
+          text-transform: uppercase;
+          a {
+            font-weight: $bold-font-weight;
+          }
+        }
+      }
+    }
+    .cta-with-image > div {
+      background-color: rgba(0, 0, 0, 0.5);
+      height: 200px;
+    }
+  }
+  .views-row:nth-child(odd) .paragraph {
+    background-color: $blue;
+  }
+}
+.block-views-block-ctas-block:after {
+  @include clearfix();
+}
+/* because the video has to be muted, it has to be displayed via the API, so it's hidden
+   here and displayed via jquery.highlight-video.js */
+.block-highlightvideo {
+  display: none;
+}
+.highlight-video-dynamic {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  min-width: 1440px; /* ensure that the height is never less than 760px */
+  height: 760px;
+  overflow: hidden;
+  .video-container {
+    margin: -20px; /* avoid any letterboxing in case it doesn't fit perfectly */
+  }
+}
+#main .block-highlights {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 760px;
+  font-size: 1.375em;
+  font-weight: $bold-font-weight;
+  line-height: 1.125;
+  ul {
+    margin: 0;
+    li {
+      position: absolute;
+      left: 50%;
+      top: 320px;
+      display: table;
+      margin-left: -400px;
+      h4 {
+        display: table-cell;
+        vertical-align: middle;
+        width: 140px;
+        height: 140px;
+        background-color: $red;
+        text-align: center;
+        @include border-radius(50%);
+        em {
+          display: block;
+          font-size: 1.5em;
+          font-style: normal;
+        }
+      }
+      p {
+        display: table-cell;
+        vertical-align: middle;
+        padding-left: 20px;
+        width: 120px;
+      }
+      + li {
+        top: 500px;
+        margin-left: -240px;
+        h4 {
+          background-color: $medium-grey;
+        }
+        p {
+          width: 160px;
+        }
+        + li {
+          top: 320px;
+          margin-left: 40px;
+          h4 {
+            background-color: $blue;
+          }
+          + li {
+            top: 120px;
+            margin-left: 160px;
+            h4 {
+              background-color: $orange;
+            }
+          }
+        }
+      }
+    }
+    li:before {
+      content: '';
+      margin: 0;
+    }
+  }
+}
+#sidebar {
+  box-sizing: border-box;
+  padding: $default-block-padding;
+  width: $one-third;
+  float: right;
+  font-size: 0.875em;
+  line-height: 1.5;
+  h1 {
+    margin-bottom: 8px;
+    font-size: 3em;
+    font-weight: $bold-font-weight;
+    text-transform: uppercase;
+    line-height: 1.125;
+  }
+  p,
+  ol,
+  ul {
+    margin-bottom: 12px;
+  }
+  a {
+    text-decoration: underline;
+    color: $dark-grey;
+  }
+  nav {
+    border-top: 1px solid $light-grey;
+    padding-top: 12px;
+    ul {
+      margin-bottom: 0;
+      font-size: 1.14285714em;
+    }
+    a {
+      text-decoration: none;
+      font-weight: $bold-font-weight;
+      color: $red;
+    }
+    .submenu {
+      > h3 {
+        display: none;
+      }
+      ul {
+        padding-left: 1em;
+        font-size: 0.875em;
+        ul {
+          font-size: 1em;
+        }
+      }
+    }
+  }
+  h2 {
+    margin-bottom: 8px;
+    font-size: 1.71428571em;
+    font-weight: $bold-font-weight;
+    line-height: 1.125;
+    text-transform: uppercase;
+  }
+  h3,
+  .view-details .attachment-after header h3,
+  .field--name-field-code {
+    margin: 24px 0 8px 0;
+    border-top: 1px solid $light-grey;
+    padding-top: 12px;
+    font-size: 1.28571429em;
+    font-weight: $bold-font-weight;
+    text-transform: uppercase;
+  }
+  .view-details header h3,
+  .field--name-field-code {
+    margin-top: 0;
+  }
+  h4 {
+    font-size: 1.14285714em;
+    font-weight: $bold-font-weight;
+  }
+  h5 {
+    font-weight: $bold-font-weight;
+  }
+  .field--name-field-social-media a {
+    font-size: 1.14285714em;
+    text-decoration: none;
+  }
+  .field--name-field-image {
+    .field__item {
+      margin-bottom: 24px;
+    }
+    img {
+      display: block;
+      margin-bottom: 8px;
+      width: 100%;
+      height: auto;
+    }
+  }
+  .field + .field--name-field-image {
+    margin-top: 32px;
+  }
+  .node__content {
+    > .field--name-field-location:before {
+      content: '\f041' !important;
+      margin-left: 6px !important;
+    }
+    > .field--name-field-attendee:before {
+      content: '\f0c0' !important;
+    }
+    > .field--name-field-cost:before {
+      content: '\f155' !important;
+      margin-left: 6px !important;
+    }
+    > .field--name-field-contact:before {
+      content: '\f003' !important;
+    }
+    > .field--name-field-registration-link:before {
+      content: '\f044' !important;
+    }
+    > .field--name-field-additional-information:before {
+      content: '\f05a' !important;
+    }
+    > .field--name-field-speaker:before {
+      content: '\f007' !important;
+    }
+  }
+}
+body.page-node-type-event #sidebar,
+body.page-node-type-speaker-event #sidebar,
+body.page-node-type-story #sidebar {
+  float: left;
+  h2 {
+    font-size: 1.286em;
+  }
+  h3 {
+    margin: 12px 0 0 0;
+    border-top: none;
+    padding-top: 0;
+    font-size: 1em;
+  }
+}
+.field--name-field-social-media {
+  font-size: 1.5em;
+  .field__item {
+    display: inline-block;
+  }
+  a {
+    display: block;
+    width: 1em;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  a:before {
+    content: '\f064';
+    margin-right: 2em;
+    font-family: FontAwesome;
+  }
+  a.social-media-facebook:before {
+    content: '\f082';
+  }
+  a.social-media-instagram:before {
+    content: '\f16d';
+  }
+  a.social-media-twitter:before {
+    content: '\f081';
+  }
+  a.social-media-youtube:before {
+    content: '\f166';
+  }
+  span.ext {
+    display: none;
+  }
+}
+.node--view-mode-full {
+  .field {
+    margin-bottom: 16px;
+  }
+  .field--label-above > h3:first-child {
+    margin-top: 16px;
+  }
+  .field--label-inline {
+    margin-bottom: 8px;
+  }
+  .field--name-field-publication-year,
+  .field--name-field-publication-year *,
+  .field--name-field-person-publication-type,
+  .field--name-field-person-publication-type *,
+  .field--label-inline * {
+    display: inline;
+  }
+  .field--label-inline {
+    .field__label {
+      font-weight: $bold-font-weight;
+    }
+    .field__label:after {
+      content: ':';
+    }
+    .field__item:after {
+      content: ',';
+    }
+    .field__item:last-child:after {
+      content: '';
+    }
+  }
+  .field--name-field-person-publication-type:before {
+    content: '/';
+    margin-right: 0.25em;
+  }
+  .field--name-field-publication-description {
+    margin-top: 8px;
+  }
+  .field--name-field-image {
+    box-sizing: border-box;
+    padding-right: 40px;
+    width: 50%;
+    float: left;
+    font-size: 0.875em;
+    .field__item {
+      margin-bottom: 24px;
+    }
+    img {
+      display: block;
+      margin-bottom: 4px;
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+.node--view-mode-teaser .caption {
+  display: none;
+}
+.node--view-mode-detail {
+  .field--label-inline *,
+  .field--name-field-degree *,
+  .field--name-field-author > .field__item *,
+  .field--name-field-teaching-and-research .field__items *,
+  .field--name-field-instructor > .field__items > .field__item * {
+    display: inline;
+  }
+  .field--label-inline {
+    .field__label {
+      font-weight: $bold-font-weight;
+    }
+    .field__label:after {
+      content: ':';
+    }
+  }
+  .field--label-inline .field__item:after,
+  .field--name-field-author .field__item .field__item:after,
+  .field--name-field-degree .field__item:after,
+  .field--name-field-instructor .field--name-field-instructor:after {
+    content: ',';
+  }
+  .field--name-field-teaching-and-research .field__item:after {
+    content: '/';
+    margin-left: 0.25em;
+  }
+  .field--label-inline .field__item:last-child:after,
+  .field--name-field-author .field:last-child .field__item:last-child:after,
+  .field--name-field-degree .field__item:last-child:after,
+  .field--name-field-teaching-and-research .field__item:last-child:after,
+  .field--name-field-instructor .field--name-field-instructor:last-child:after {
+    content: '';
+  }
+  .field--name-field-telephone,
+  .field--name-field-email,
+  .field--name-field-social-media {
+    margin-top: 8px;
+  }
+}
+.node--view-mode-alternate-teaser {
+  .field {
+    margin-bottom: 16px;
+  }
+  .field--name-field-speaker-name,
+  .field--name-field-speaker-title {
+    margin: 0;
+    display: inline;
+    font-weight: $bold-font-weight;
+  }
+  .field--name-field-speaker-title:before {
+    content: '/';
+    margin-right: 0.25em;
+  }
+}
+form,
+.form-item,
+.form-actions,
+.captcha {
+  margin-bottom: 24px;
+}
+fieldset,
+fieldset.fieldgroup {
+  border: 1px solid $light-grey;
+  padding: 12px;
+  .form-item:first-child {
+    margin-top: 0;
+  }
+}
+fieldset legend,
+.form-composite legend {
+  display: block;
+  margin: 0 -13px;
+  background-color: $light-grey;
+  padding: 4px 13px;
+  width: 100%;
+}
+fieldset.webform-type-radios legend {
+  margin: 0;
+  background-color: transparent;
+  padding: 0;
+  width: auto;
+}
+.form-checkboxes .form-item,
+.js-webform-radios .form-item {
+  margin-bottom: 8px;
+}
+.form-item {
+  label {
+    display: block;
+    margin-bottom: 4px;
+  }
+  .form-checkbox + label,
+  .form-radio + label {
+    display: inline;
+  }
+}
+select.form-select,
+input.form-text,
+input.form-number,
+input.form-email,
+input.form-tel,
+input.form-date,
+input.form-time,
+input.form-submit,
+input.form-search,
+textarea {
+  margin: 0;
+  border: none;
+  background-color: $light-grey;
+  padding: 7px 8px 5px 8px;
+  font-family: $font-stack;
+  font-size: $font-size;
+  line-height: 1.25;
+  color: $dark-grey;
+  @include border-radius(0);
+}
+input.form-submit {
+  background-color: $red;
+  padding: 8px 24px 6px 24px;
+  line-height: 1;
+  color: $white;
+  cursor: pointer;
+  @include border-radius(4px);
+}
+.view-taxonomy-term,
+.queenslaw-teasers { /* class can be added manually to all views using this layout */
+  margin: 24px -20px;
+  .teaser,
+  .views-row {
+    box-sizing: border-box;
+    padding: $default-block-padding;
+    padding-bottom: 24px;
+    width: 25%;
+    float: left;
+  }
+  .teaser:nth-child(4n + 1),
+  .views-row:nth-child(4n + 1) {
+    clear: both;
+  }
+  .teaser-image {
+    margin-bottom: 12px;
+    background-color: $light-grey;
+    padding-bottom: $two-thirds;
+    height: 0;
+  }
+  .teaser-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  h3 + footer {
+    margin: -12px 0 16px 0;
+  }
+  article {
+    + ul {
+      margin-top: 16px;
+      border-top: 1px solid $light-grey;
+      padding-top: 12px;
+      a {
+        font-weight: $bold-font-weight;
+      }
+    }
+  }
+}
+.queenslaw-teasers ul.links {
+  display: none;
+}
+body.has-queenslaw-alternate-teasers #main .queenslaw-teasers {
+  margin: 0;
+  color: $white;
+  h3 {
+    text-transform: uppercase;
+  }
+  a {
+    color: $white;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  .teaser {
+    position: relative;
+    display: table;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-origin: padding-box;
+    background-clip: padding-box;
+    background-color: $dark-grey;
+    padding: 0;
+    width: $one-third;
+    height: 200px;
+    overflow: hidden;
+    > .content {
+      position: relative;
+      display: table-cell;
+      vertical-align: bottom;
+      padding: 20px;
+    }
+  }
+  .teaser-a-unique-online-way-to-learn-the-law {
+    background-color: $blue;
+  }
+  .teaser:not(.has-children) {
+    > .content {
+      padding-right: 60px;
+    }
+    ul.links.inline {
+      display: block;
+      position: absolute;
+      right: 16px;
+      bottom: 20px;
+      a:hover {
+        text-decoration: none;
+      }
+    }
+    h3 {
+      margin-bottom: 0;
+    }
+    .field--name-body {
+      margin: 4px 0 0 0;
+    }
+  }
+  .teaser.has-teaser-image > .content {
+    background-color: rgba(0, 0, 0, 0.66666667);
+  }
+  .teaser:nth-child(4n + 1) {
+    clear: none;
+  }
+  .teaser:nth-child(even) {
+    background-color: $red;
+  }
+  article {
+    + ul {
+      margin: 0;
+      border-top: none;
+      padding-top: 0;
+    }
+  }
+}
+body.queenslaw-main-site.page-programs-jd #main .queenslaw-teasers {
+  .teaser {
+    height: 400px;
+  }
+  .teaser:not(.has-teaser-image):nth-child(3) {
+    background-color: $yellow;
+    color: $dark_grey;
+    a {
+      color: $dark_grey;
+    }
+    ul.links.inline li.node-readmore a {
+      border-color: $dark_grey;
+    }
+  }
+  .teaser:nth-child(4),
+  .teaser:nth-child(5) {
+    width: 50%;
+  }
+}
+body.sidebar-first .view-taxonomy-term,
+body.sidebar-first .queenslaw-teasers {
+  .teaser,
+  .views-row {
+    width: $one-third;
+  }
+  .teaser:nth-child(4n + 1),
+  .views-row:nth-child(4n + 1) {
+    clear: none;
+  }
+  .teaser:nth-child(3n + 1),
+  .views-row:nth-child(3n + 1) {
+    clear: both;
+  }
+}
+.block-views .view-people,
+body.landing-page-directory .view-people,
+.block-queenslaw-people {
+  margin: 24px -20px;
+  .views-row,
+  .queenslaw-person {
+    box-sizing: border-box;
+    padding: $default-block-padding;
+    padding-bottom: 24px;
+    width: 50%;
+    float: left;
+  }
+  .views-row:nth-child(2n + 1),
+  .queenslaw-person:nth-child(2n + 1) {
+    clear: both;
+  }
+  article {
+    border-top: 1px solid $light-grey;
+    padding-top: 12px;
+    > h2 {
+      display: inline;
+      font-size: 1.5em !important;
+    }
+    > .field--name-field-title {
+      display: inline;
+      h3 {
+        display: inline;
+        font-weight: $font-weight !important;
+      }
+    }
+    > .field--name-field-title h3:before {
+      content: '/';
+      margin-right: 0.25em;
+    }
+    .node__content {
+      margin-top: 8px;
+    }
+    .field--name-field-person-type {
+      width: $two-thirds;
+      float: left;
+      font-size: 0.875em;
+      > .field__item {
+        margin-right: 1em;
+      }
+      * {
+        display: inline-block;
+      }
+      .field--name-field-color {
+        position: relative;
+        top: 5px;
+        margin-right: 0.25em;
+      }
+    }
+    ul.links {
+      width: $one-third;
+      float: right;
+      text-align: right;
+      a {
+        position: relative;
+        padding-right: 36px;
+        font-weight: $bold-font-weight;
+      }
+      a:after {
+        position: absolute;
+        top: -2px;
+        right: 0;
+        content: '\f105';
+        display: block;
+        border: 2px solid $red;
+        padding: 0 6px;
+        width: 12px;
+        height: 24px;
+        font-family: FontAwesome;
+        font-size: 1.5em;
+        line-height: 1;
+        @include border-radius(50%);
+      }
+    }
+  }
+  article.node-has-teaser-image {
+    .teaser-image {
+      margin: 4px 20px 12px 0;
+      width: $one-third;
+      float: left;
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+    }
+    .field--name-field-person-type {
+      margin-bottom: 16px;
+      width: auto;
+      float: none;
+    }
+    ul.links {
+      width: auto;
+      float: none;
+    }
+  }
+  article:after {
+    @include clearfix();
+  }
+  .views-exposed {
+    padding: 0 20px;
+    line-height: 1;
+    .form-item-filter {
+      width: 200px;
+      label {
+        display: none;
+      }
+    }
+    .form-checkboxes {
+      display: none;
+      margin: 16px 0;
+      .form-item {
+        box-sizing: border-box;
+        display: block;
+        padding: 0 1em 8px 0;
+        width: 20%;
+        min-height: 48px;
+        float: left;
+        line-height: 1.25;
+      }
+      .form-item:nth-child(5n + 1) {
+        clear: left;
+      }
+    }
+    .form-checkboxes:after {
+      @include clearfix();
+    }
+  }
+  .empty {
+    padding: 0 20px;
+    + .empty {
+      display: none; // in case both filters generate an empty message
+    }
+  }
+}
+.block-views-block-people-block-2 {
+  .views-row-set {
+    width: 100%;
+    float: left;
+    .views-row {
+      padding: 0 20px 24px 0;
+      .views-field-field-teaser-image {
+        width: $one-third;
+        float: left;
+        margin: 4px 20px -8px 0;
+      }
+      .views-field-field-person-type {
+        font-size: 0.875em;
+        margin-bottom: 16px;
+        > .field__item {
+          margin-right: 1em;
+        }
+        * {
+          display: inline-block;
+        }
+        .field--name-field-color {
+          position: relative;
+          top: 5px;
+          margin-right: 0.25em;
+        }
+      }
+      .views-field-view-node {
+        text-align: right;
+        a {
+          font-weight: 600;
+          padding-right: 36px;
+          position: relative;
+        }
+        a::after {
+          position: absolute;
+          top: -2px;
+          right: 0;
+          content: '\f105';
+          display: block;
+          border: 2px solid #9d1939;
+          padding: 0 6px;
+          width: 12px;
+          height: 24px;
+          font-family: FontAwesome;
+          font-size: 1.5em;
+          line-height: 1;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          -ms-border-radius: 50%;
+          border-radius: 50%;
+        }
+      }
+    }
+    .title {
+      margin-bottom: 16px;
+      font-size: 1.71428571em;
+      font-weight: $bold-font-weight;
+      line-height: 1.125;
+      text-transform: uppercase;
+    }
+    .views-row:nth-child(odd) {
+      clear: none;
+      padding: 0 0 24px 0;
+    }
+    .views-row:nth-child(even) {
+      clear: left;
+      padding: 0 20px 24px 0;
+    }
+  }
+}
+// the directory might have hidden rows, so clear is handled dynamically
+body.landing-page-directory .people-dynamic {
+  .views-row:nth-child(2n + 1) {
+    clear: none;
+  }
+  .views-row-even,
+  .views-row-even:nth-child(2n + 1) {
+    clear: left;
+  }
+  .people-dynamic-empty {
+    display: none;
+  }
+  .views-exposed .form-checkboxes {
+    display: block;
+    .form-item {
+      position: relative;
+      padding-left: 32px;
+      cursor: pointer;
+      input {
+        position: absolute;
+        visibility: hidden;
+      }
+      label {
+        cursor: pointer;
+      }
+      label:before {
+        position: absolute;
+        left: 0;
+        top: -2px;
+        content: '\00a0';
+        display: block;
+        border-width: 2px;
+        border-style: solid;
+        width: 20px;
+        height: 20px;
+        float: left;
+        @include border-radius(50%);
+      }
+    }
+  }
+  .clear-all-filters {
+    margin-left: 1em;
+    font-weight: $bold-font-weight;
+    color: $dark-grey;
+  }
+  .clear-all-filters:before {
+    content: '\f00d';
+    position: relative;
+    top: -2px;
+    display: inline-block;
+    margin-right: 0.5em;
+    border: 2px solid $red;
+    padding: 3px 0 0 5px;
+    width: 18px;
+    height: 20px;
+    font-family: FontAwesome;
+    line-height: 1;
+    color: $red;
+    @include border-radius(50%);
+  }
+}
+body.landing-page-directory .people-dynamic.empty .people-dynamic-empty {
+  display: block;
+}
+body.sidebar-first .block-views-block-people-block,
+body.sidebar-first .block-queenslaw-people {
+  article {
+    .field--name-field-teaching-and-research {
+      width: 70%;
+    }
+    ul.links {
+      width: 30%;
+    }
+  }
+}
+.queenslaw-video-container {
+  position: relative;
+  margin-bottom: 24px;
+  padding-bottom: 56.25%;
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+}
+.queenslaw-video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+#superfooter:after {
+  @include clearfix();
+}
+#superfooter {
+  margin-bottom: 32px;
+  h2 {
+    font-size: 1.125em;
+    font-weight: $bold-font-weight;
+    text-transform: uppercase;
+  }
+  .block-type-contact,
+  .block-facultyoflaw {
+    box-sizing: border-box;
+    padding: $default-block-padding;
+    width: 41.66666667%;
+    float: left;
+    .field--label-inline * {
+      display: inline;
+    }
+    .field--name-field-address {
+      padding-right: 20px;
+      width: 50%;
+      float: left;
+    }
+  }
+  .block-queensuniversitylogo {
+    box-sizing: border-box;
+    padding-right: 20px;
+    width: 16.66666667%;
+    max-width: 160px;
+    float: right;
+    svg {
+      width: 100%;
+      height: auto;
+    }
+  }
+  .block-sirjohnamacdonaldhall {
+    margin: -40px -20px 40px -20px;
+    padding: 0 20px;
+    background: url(../sir-john-a-macdonald-hall.jpg) center center / cover no-repeat scroll padding-box padding-box transparent;
+    height: 760px;
+  }
+  .block-sirjohnamacdonaldhall.parallax {
+    background-image: none;
+  }
+}
+#footer {
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 40px 20px;
+  min-width: $min-width;
+  line-height: 1.5;
+  a:hover {
+    text-decoration: underline;
+  }
+  .footer-content {
+    padding: $default-block-padding;
+    font-size: 0.75em;
+  }
+  nav {
+    li {
+      display: inline;
+      a {
+        margin: 0 0.5em;
+      }
+      + li:before {
+        content: '/';
+      }
+    }
+    li:first-child a {
+      margin-left: 0;
+    }
+  }
+  span.ext {
+    display: none;
+  }
+}

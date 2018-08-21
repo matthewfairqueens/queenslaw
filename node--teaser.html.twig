@@ -1,0 +1,68 @@
+{#
+/**
+ * If there's a teaser image, or there's a title image, or there are hero images, or there
+ * are images, render it above the title, and then hide them all in the content. (If it's
+ * a multiple field, render only the first one.)
+ *
+ * If there's a title (field_title, i.e. a person's professional title), render it right
+ * after the node title (i.e., the person's name).
+ */
+#}
+{% if content.field_teaser_image|render|trim is not empty %}
+  {% set image = content.field_teaser_image %}
+{% elseif content.field_hero_image[0]|render|trim is not empty %}
+  {% set image = content.field_hero_image[0] %}
+{% elseif content.field_title_image|render|trim is not empty %}
+  {% set image = content.field_title_image %}
+{% elseif content.field_image[0]|render|trim is not empty %}
+  {% set image = content.field_image[0] %}
+{% endif %}
+{%
+  set classes = [
+    'node',
+    'node--type-' ~ node.bundle|clean_class,
+    node.isPromoted() ? 'node--promoted',
+    node.isSticky() ? 'node--sticky',
+    not node.isPublished() ? 'node--unpublished',
+    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+    image ? 'node-has-teaser-image',
+  ]
+%}
+<article{{ attributes.addClass(classes) }}>
+  <div class="teaser-image">
+    {% if image %}
+      {{ image }}
+    {% endif %}
+  </div>
+  {{ title_prefix }}
+  {% if not page and display_header %}
+    <h{{ header_level }}{{ title_attributes }}>
+      {% if header_linked %}
+        <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+      {% else %}
+        {{ label }}
+      {% endif %}
+    </h{{ header_level }}>
+    {% if content.field_title is not empty %}
+      {{ content.field_title }}
+    {% endif %}
+  {% endif %}
+  {{ title_suffix }}
+  {% if display_submitted %}
+    <footer class="node__meta">
+      <div{{ author_attributes.addClass('node__submitted') }}>
+        {{ date }}
+        {{ metadata }}
+      </div>
+      {% if bundle %}
+        <div class="bundle">{{ bundle }}</div>
+      {% endif %}
+      {% if category %}
+        <div class="category">{{ category }}</div>
+      {% endif %}
+    </footer>
+  {% endif %}
+  <div{{ content_attributes.addClass('node__content') }}>
+    {{ content|without('field_hero_image', 'field_image', 'field_teaser_image', 'field_title', 'field_title_image') }}
+  </div>
+</article>

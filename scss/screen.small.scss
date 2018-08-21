@@ -1,0 +1,292 @@
+body {
+  font-size: 1em;
+}
+#superheader .block-queenslaw-utility-bar {
+  padding: 0 20px 10px 20px;
+}
+#superheader .block-queenslaw-utility-bar .queens-wordmark {
+  display: none;
+}
+button.qw-header-component.qw-search-login-toggle.default {
+  float: none;
+}
+#superheader .block-queenslaw-utility-bar #qw-header {
+  margin: 0 0 10px 0;
+}
+#superheader .block-queenslaw-utility-bar .qw-customsearch {
+  width: 100%;
+}
+#superheader .block-queenslaw-utility-bar .qw-customsearch input.form-text {
+  width: 100%;
+}
+#superheader .block-queenslaw-utility-bar .qw-customsearch .form-item-search-terms {
+  width: 80%;
+}
+#header {
+  height: 140px;
+}
+#header > div {
+  padding: 0;
+}
+#subheader > div {
+  padding: 12px 0;
+}
+#main .block-views-block-ctas-block .views-row {
+  width: 100%;
+  float: none;
+}
+body.queenslaw-main-site {
+  #branding {
+    margin-top: 0;
+    padding: 16px 20px;
+  }
+}
+#branding + div {
+  float: left;
+}
+body.queenslaw-main-site #branding {
+  padding: 10px 20px 16px 20px;
+}
+body.queenslaw-main-site #branding .block svg {
+  height: 44px;
+}
+body.queenslaw-main-site #branding .block-logo svg {
+  height: 28px;
+}
+.block-searchform {
+  float: none;
+  top: 0;
+  padding: 0 0 5px 0 !important;
+  top: 15px;
+  left: 20px;
+  margin-left: 0;
+}
+#block-mainnavigation .small-screen-nav-trigger {
+  top: 80px;
+  right: 20px;
+}
+#block-mainnavigation > ul {
+  padding: 0 20px;
+  margin: 20px 0;
+}
+#block-subsubsection-navigation + .block-queenslaw-breadcrumbs ol {
+  padding-left: 0;
+}
+#supercontent .block-views-block-features-block > div .fields:after, 
+#supercontent .block-views-block-stories-front-block > div .fields:after, 
+#main .block-views-block-events-block > div .fields:after,
+#main .block-views-block-events-block-alumni > div .fields:after,
+#main .block-views-block-events-front-block > div .fields:after, 
+#main .block-views-block-speaker-events-block > div .fields:after, 
+#main .block-views-block-speaker-events-front-block > div .fields:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+#supercontent .block-views-block-features-block > div .fields > div > div, 
+#supercontent .block-views-block-stories-front-block > div .fields > div > div, 
+#main .block-views-block-events-block > div .fields > div > div, 
+#main .block-views-block-events-block-alumni > div .fields > div > div,
+#main .block-views-block-events-front-block > div .fields > div > div, 
+#main .block-views-block-speaker-events-block > div .fields > div > div, 
+#main .block-views-block-speaker-events-front-block > div .fields > div > div {
+  display: block;
+  padding: 0 20px;
+}
+#supercontent .block-views-block-stories-front-block .field--name-field-date, 
+#main .block-views-block-events-block .field--name-field-date,
+#main .block-views-block-events-block-alumni .field--name-field-date,
+#main .block-views-block-events-front-block .field--name-field-date, 
+#main .block-views-block-speaker-events-block .field--name-field-date, 
+#main .block-views-block-speaker-events-front-block .field--name-field-date {
+  left: 20px;
+}
+#supercontent .block-views-block-features-block > div .fields > div, 
+#supercontent .block-views-block-stories-front-block > div .fields > div, 
+#main .block-views-block-events-block > div .fields > div, 
+#main .block-views-block-events-block-alumni > div .fields > div,
+#main .block-views-block-events-front-block > div .fields > div, 
+#main .block-views-block-speaker-events-block > div .fields > div, 
+#main .block-views-block-speaker-events-front-block > div .fields > div {
+  height: auto;
+}
+
+#supercontent .block-views-block-features-block .feature-image, 
+#supercontent .block-views-block-features-block .teaser-image, 
+#supercontent .block-views-block-stories-front-block .feature-image, 
+#supercontent .block-views-block-stories-front-block .teaser-image, 
+#main .block-views-block-events-block .feature-image, 
+#main .block-views-block-events-block .teaser-image, 
+#main .block-views-block-events-block-alumni .feature-image,
+#main .block-views-block-events-block-alumni .teaser-image,
+#main .block-views-block-events-front-block .feature-image, 
+#main .block-views-block-events-front-block .teaser-image, 
+#main .block-views-block-speaker-events-block .feature-image, 
+#main .block-views-block-speaker-events-block .teaser-image, 
+#main .block-views-block-speaker-events-front-block .feature-image, 
+#main .block-views-block-speaker-events-front-block .teaser-image {
+  width: 100%;
+  right: 0;
+}
+#supercontent .block-views-block-features-block > div .fields > div, 
+#supercontent .block-views-block-stories-front-block > div .fields > div, 
+#main .block-views-block-events-block > div .fields > div, 
+#main .block-views-block-events-block-alumni > div .fields > div,
+#main .block-views-block-events-front-block > div .fields > div, 
+#main .block-views-block-speaker-events-block > div .fields > div, 
+#main .block-views-block-speaker-events-front-block > div .fields > div {
+  padding-left: 0;
+  width: 100%;
+}
+#supercontent .block-views-block-stories-front-block .teaser-image, 
+#main .block-views-block-events-block .teaser-image,
+#main .block-views-block-events-block-alumni .teaser-image,
+#main .block-views-block-events-front-block .teaser-image, 
+#main .block-views-block-speaker-events-block .teaser-image, 
+#main .block-views-block-speaker-events-front-block .teaser-image {
+  left: 0;
+  width: 100%;
+}
+#supercontent .block-views-block-stories-front-block > div .fields > div, 
+#main .block-views-block-events-block > div .fields > div, 
+#main .block-views-block-events-block-alumni > div .fields > div,
+#main .block-views-block-events-front-block > div .fields > div, 
+#main .block-views-block-speaker-events-block > div .fields > div, 
+#main .block-views-block-speaker-events-front-block > div .fields > div {
+  padding-left: 0;
+  padding-right: 0;
+  width: 100%;
+}
+body.queenslaw-main-site.page-programs-jd #main .queenslaw-teasers .teaser:nth-child(4), 
+body.queenslaw-main-site.page-programs-jd #main .queenslaw-teasers .teaser:nth-child(5),
+body.queenslaw-main-site.page-programs-jd #main .queenslaw-teasers .teaser:nth-child(n + 6),
+body.has-queenslaw-alternate-teasers #main .queenslaw-teasers .teaser {
+  width: 100%;
+}
+.content-container {
+  padding: 0;
+}
+.block-views-block-page-title-block .page-title > .fields > div > div, 
+.block-pagetitle .page-title > .fields > div > div {
+  padding: 0 20px;
+}
+body:not(.front) #supercontent {
+  margin: 0 0 20px 0;
+}
+.block-views-block-page-title-block .page-title-image, 
+.block-pagetitle .page-title-image {
+  left: 0;
+  width: 100%;
+  height: 160px;
+  position: relative;
+}
+.block-views-block-page-title-block .page-title-with-image > .fields > div, 
+.block-pagetitle .page-title-with-image > .fields > div {
+  padding-right: 0;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.block-views-block-page-title-block .page-title > .fields, 
+.block-pagetitle .page-title > .fields {
+  padding: 20px 0;
+}
+.view-taxonomy-term .teaser, 
+.view-taxonomy-term .views-row, 
+.queenslaw-teasers .teaser, 
+.queenslaw-teasers .views-row {
+  width: 100%;
+}
+#main .block-views-block-events-block .views-row:nth-child(even) .fields > div,
+#main .block-views-block-events-block-alumni .views-row:nth-child(even) .fields > div,
+#main .block-views-block-speaker-events-block .views-row:nth-child(even) .fields > div {
+  padding-left: 0;
+}
+
+#supercontent .block-views-block-features-block .feature-image {
+  box-shadow: inset 0 0 0 1000px rgba(0,0,0,.65);
+}
+#supercontent .block-views-block-stories-front-block .teaser-image,
+#main .block-views-block-speaker-events-front-block .teaser-image,
+#main .block-views-block-events-block .teaser-image,
+#main .block-views-block-events-block-alumni .teaser-image, {
+  box-shadow: inset 0 0 0 1000px rgba(255,255,255,.70);
+}
+
+#main .block-highlights ul {
+  padding-left: 20px;
+}
+#main .block-highlights ul li,
+#main .block-highlights ul li + li, 
+#main .block-highlights ul li + li + li, 
+#main .block-highlights ul li + li + li + li {
+  margin-left: 0;
+}
+
+#superfooter .block-sirjohnamacdonaldhall {
+  height: 400px;
+}
+
+.node--view-mode-full .field--name-field-image {
+  width: 100%;
+  float: none;
+  padding-right: 0;
+}
+.align-left {
+  float: none;
+  margin: 0 0 15px 0;
+}
+.align-right {
+  float: none;
+  margin: 0 0 15px 0;
+}
+.block-views .view-people article ul.links, 
+body.landing-page-directory .view-people article ul.links, 
+.block-queenslaw-people article ul.links {
+  float: left;
+  width: 100%;
+  margin: 10px 0 0 0;
+  text-align: left;
+}
+.block-views .view-people article ul.links a, 
+body.landing-page-directory .view-people article ul.links a, 
+.block-queenslaw-people article ul.links a {
+  text-align: right;
+}
+.block-views .view-people article .field--name-field-person-type, 
+body.landing-page-directory .view-people article .field--name-field-person-type, 
+.block-queenslaw-people article .field--name-field-person-type {
+  width: 100%;
+}
+.view-people .views-exposed form .form-actions:before {
+  left: -20px;
+  position: relative;
+}
+
+#superfooter .block-type-contact, 
+#superfooter .block-facultyoflaw {
+  width: 100%;
+  padding: 0;
+}
+#footer .footer-content {
+  padding: 0;
+}
+#superfooter .block-queensuniversitylogo {
+  width: 100%;
+  float: left;
+  margin: 20px 0 0 0;
+}
+#superfooter .block-type-contact .field--name-field-address, 
+#superfooter .block-facultyoflaw .field--name-field-address {
+  width: 100%;
+}
+
+#block-highlightvideo {
+  display: none;
+}
+
+#supercontent .block-views-block-ctas-block,
+#supercontent .block-views-block-events-front-block {
+  width: 100%;
+}

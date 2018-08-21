@@ -1,0 +1,36 @@
+{# See https://www.drupal.org/node/953034 #}
+{% set sidebar_first = page.sidebar_first|render %}
+{% set sidebar_first_not_empty = sidebar_first|striptags('<img>')|trim %}
+{% set sidebar_second = page.sidebar_second|render %}
+{% set sidebar_second_not_empty = sidebar_second|striptags('<img>')|trim %}
+{%
+  set body_classes = [
+    logged_in ? 'user-logged-in',
+    not root_path ? 'front' : 'subpage path-' ~ root_path|clean_class,
+    node_type ? 'page-node-type-' ~ node_type|clean_class,
+    db_offline ? 'db-offline',
+    not sidebar_first_not_empty and not sidebar_second_not_empty ? 'no-sidebars',
+    sidebar_first_not_empty and not sidebar_second_not_empty ? 'sidebar-first',
+    sidebar_second_not_empty and not sidebar_first_not_empty ? 'sidebar-second',
+    sidebar_first_not_empty and sidebar_second_not_empty ? 'both-sidebars',
+    language ? 'language-' ~ language|clean_class
+  ]
+%}
+<!DOCTYPE html>
+<html{{ html_attributes }}>
+  <head>
+    <head-placeholder token="{{ placeholder_token|raw }}">
+    <title>{{ head_title|safe_join(' | ') }}</title>
+    <css-placeholder token="{{ placeholder_token|raw }}">
+    <js-placeholder token="{{ placeholder_token|raw }}">
+  </head>
+  <body{{ attributes.addClass(body_classes) }}>
+    <a href="#main-content" class="visually-hidden focusable">
+      {{ 'Skip to main content'|t }}
+    </a>
+    {{ page_top }}
+    {{ page }}
+    {{ page_bottom }}
+    <js-bottom-placeholder token="{{ placeholder_token|raw }}">
+  </body>
+</html>

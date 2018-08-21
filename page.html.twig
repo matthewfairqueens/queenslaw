@@ -1,0 +1,65 @@
+<div class="container">
+  {% if page.superheader %}
+    <div id="superheader">
+      {{ page.superheader }}
+    </div>
+  {% endif %}
+  <header id="header" role="banner">
+    <div>
+      {% if page.branding %}
+        <div id="branding">
+          {{ page.branding }}
+        </div>
+      {% endif %}
+      <div class="header-content">
+        {{ page.header }}
+      </div>
+    </div>
+  </header>
+  {% if page.subheader %}
+    <div id="subheader">
+      {{ page.subheader }}
+    </div>
+  {% endif %}
+  {% if page.supercontent %}
+    <div id="supercontent">
+      {{ page.supercontent }}
+    </div>
+  {% endif %}
+  <div class="content-container">
+    <div>
+      <main id="main" role="main">
+        <a id="main-content" tabindex="-1"></a>
+        {{ page.help }}
+        <div id="content">
+          {{ page.content }}
+        </div>
+        {% if page.subcontent %}
+          <div id="subcontent">
+            {{ page.subcontent }}
+          </div>
+        {% endif %}
+      </main>
+      {# See https://www.drupal.org/node/953034 #}
+      {% set sidebar_first = page.sidebar_first|render %}
+      {% set sidebar_first_not_empty = sidebar_first|striptags('<img>')|trim %}
+      {% if sidebar_first_not_empty %}
+        <aside id="sidebar" role="complementary">
+          {{ sidebar_first }}
+        </aside>
+      {% endif %}
+    </div>
+  </div>
+</div>
+<footer id="footer" role="contentinfo">
+  {% if page.superfooter %}
+    <div id="superfooter">
+      {{ page.superfooter }}
+    </div>
+  {% endif %}
+  {% if page.footer %}
+    <div class="footer-content">
+      {{ page.footer }}
+    </div>
+  {% endif %}
+</footer>

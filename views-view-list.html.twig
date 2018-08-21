@@ -1,0 +1,16 @@
+<div class="views-row-set">
+  {% if attributes -%}
+    <div{{ attributes }}>
+  {% endif %}
+    {% if title %}
+      <div class="title">{{ title }}</div>
+    {% endif %}
+    <{{ list.type }}{{ list.attributes }}>
+      {% for row in rows %}
+        <li{{ row.attributes }}>{{ row.content }}</li>
+      {% endfor %}
+    </{{ list.type }}>
+  {% if attributes -%}
+    </div>
+  {% endif %}
+</div>

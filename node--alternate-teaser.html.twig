@@ -1,0 +1,61 @@
+{% set image = content.field_teaser_image|render|striptags|trim %}
+{%
+  set classes = [
+    'node',
+    'node--type-' ~ node.bundle|clean_class,
+    node.isPromoted() ? 'node--promoted',
+    node.isSticky() ? 'node--sticky',
+    not node.isPublished() ? 'node--unpublished',
+    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+    image ? 'has-teaser-image',
+  ]
+%}
+<article{{ attributes.addClass(classes) }}>
+  {% if image %}
+    <a href="{{ url }}" class="teaser-image" style="background-image: url({{ image }})"></a>
+  {% endif %}
+  <div class="fields">
+    <div>
+      <div>
+        {% if display_submitted %}
+          <footer class="node__meta">
+            <div{{ author_attributes.addClass('node__submitted') }}>
+              {{ date }}
+              {{ metadata }}
+            </div>
+            {% if bundle %}
+              <div class="bundle">{{ bundle }}</div>
+            {% endif %}
+            {% if category %}
+              <div class="category">{{ category }}</div>
+            {% endif %}
+          </footer>
+        {% endif %}
+        {{ title_prefix }}
+        {% if not page and display_header %}
+          <h{{ header_level }}{{ title_attributes }}>
+            {% if header_linked %}
+              <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+            {% else %}
+              {{ label }}
+            {% endif %}
+          </h{{ header_level }}>
+          {% if content.field_title is not empty %}
+            {{ content.field_title }}
+          {% endif %}
+        {% endif %}
+        {{ title_suffix }}
+        <div{{ content_attributes.addClass('node__content') }}>
+          {{ content|without('field_teaser_image', 'field_title') }}
+          {#
+          /**
+           * Links don't appear as required in custom view modes, so add "Learn more" manually.
+           * Ref: https://www.drupal.org/node/2662898
+           */
+          #}
+          <ul class="links inline"><li class="node-readmore"><a href="{{ url }}">{{ 'Read more'|trans }}</a></li></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>

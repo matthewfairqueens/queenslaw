@@ -1,0 +1,8 @@
+<div{{ attributes }}>
+  {{ content }}
+  {{ title_prefix }}
+  {% if not page %}
+    <div class="name">{{ name }}</div>
+  {% endif %}
+  {{ title_suffix }}
+</div>

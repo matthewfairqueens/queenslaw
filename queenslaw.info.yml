@@ -1,0 +1,18 @@
+name: "Queen's University Faculty of Law"
+type: theme
+description: "A custom theme developed for the Queen's University Faculty of Law website by Purely Interactive."
+core: 8.x
+base theme: pi_base
+libraries:
+  - queenslaw/global
+regions:
+  superheader: Superheader
+  branding: Branding
+  header: Header
+  subheader: Subheader
+  supercontent: Supercontent
+  content: Content
+  subcontent: Subcontent
+  sidebar_first: Sidebar
+  superfooter: Superfooter
+  footer: Footer

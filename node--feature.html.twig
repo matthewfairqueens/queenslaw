@@ -1,0 +1,48 @@
+{% set image = content.field_feature_image|render|striptags|trim %}
+{%
+  set classes = [
+    'node',
+    'node--type-' ~ node.bundle|clean_class,
+    node.isPromoted() ? 'node--promoted',
+    node.isSticky() ? 'node--sticky',
+    not node.isPublished() ? 'node--unpublished',
+    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+  ]
+%}
+<article{{ attributes.addClass(classes) }}>
+  <div class="feature-image" style="background-image: url({{ image }})"></div>
+  <div class="fields">
+    <div>
+      <div>
+        {{ title_prefix }}
+        {% if not page and display_header %}
+          <h{{ header_level }}{{ title_attributes }}>
+            {% if header_linked %}
+              <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+            {% else %}
+              {{ label }}
+            {% endif %}
+          </h{{ header_level }}>
+        {% endif %}
+        {{ title_suffix }}
+        {% if display_submitted %}
+          <footer class="node__meta">
+            <div{{ author_attributes.addClass('node__submitted') }}>
+              {{ date }}
+              {{ metadata }}
+            </div>
+            {% if bundle %}
+              <div class="bundle">{{ bundle }}</div>
+            {% endif %}
+            {% if category %}
+              <div class="category">{{ category }}</div>
+            {% endif %}
+          </footer>
+        {% endif %}
+        <div{{ content_attributes.addClass('node__content') }}>
+          {{ content|without('field_feature_image') }}
+        </div>
+      </div>
+    </div>
+  </div>
+</article>

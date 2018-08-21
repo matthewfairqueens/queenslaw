@@ -1,0 +1,15 @@
+{#
+/**
+ * This template requires the "Twig Tweak" module to load the URI for an image style.
+ */
+#}
+{% set image_uri = image['#uri'] %}
+{% if image_style %}
+  {% set image_uri = image_uri | image_style(image_style) %}
+{% endif %}
+<div class="image">
+  <div style="background-image: url({{ image_uri }})"></div>
+</div>
+{% if caption %}
+  <div class="caption">{{ caption }}</div>
+{% endif %}

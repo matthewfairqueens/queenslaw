@@ -1,0 +1,49 @@
+{% set image = fields.field_title_image.content|striptags|trim %}
+{% set caption = fields.field_title_image_1.content|striptags|trim %}
+{% set attributes = create_attribute() %}
+{%
+  set classes = [
+    'page-title',
+    image ? 'page-title-with-image',
+    caption ? 'page-title-with-image-caption',
+  ]
+%}
+<div{{ attributes.addClass(classes) }}>
+  {%- if image -%}
+    <div class="page-title-image" style="background-image: url({{ image }})"></div>
+    {%- if caption -%}
+      <div class="page-title-image-caption">
+        <div class="caption">{{ caption }}</div>
+      </div>
+    {%- endif -%}
+  {%- endif -%}
+  <div class="fields">
+    <div>
+      <div>
+        {% for field_key, field in fields -%}
+          {%- if field_key not in ['field_title_image', 'field_title_image_1'] -%}
+            {{ field.separator }}
+            {%- if field.wrapper_element -%}
+              <{{ field.wrapper_element }}{{ field.wrapper_attributes }}>
+            {%- endif %}
+            {%- if field.label -%}
+              {%- if field.label_element -%}
+                <{{ field.label_element }}{{ field.label_attributes }}>{{ field.label }}{{ field.label_suffix }}</{{ field.label_element }}>
+              {%- else -%}
+                {{ field.label }}{{ field.label_suffix }}
+              {%- endif %}
+            {%- endif %}
+            {%- if field.element_type -%}
+              <{{ field.element_type }}{{ field.element_attributes }}>{{ field.content }}</{{ field.element_type }}>
+            {%- else -%}
+              {{ field.content }}
+            {%- endif %}
+            {%- if field.wrapper_element -%}
+              </{{ field.wrapper_element }}>
+            {%- endif %}
+          {%- endif %}
+        {%- endfor %}
+      </div>
+    </div>
+  </div>
+</div>
