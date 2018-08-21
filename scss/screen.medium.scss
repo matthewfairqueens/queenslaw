@@ -1,243 +1,6 @@
 body {
   min-width: 0;
 }
-input,
-textarea,
-select {
-  font-size: 16px !important;
-}
-#header > div {
-  min-width: auto;
-  width: auto;
-}
-#header .header-content {
-  padding-top: 0;
-  float: left;
-  text-align: left;
-  padding: 0;
-}
-#branding {
-  margin-top: 0;
-  top: 14px;
-}
-#branding .block img {
-  height: 48px !important;
-}
-#branding .block-system img {
-  height: 24px !important;
-}
-#branding {
-  margin-top: -20px;
-}
-.block-searchform {
-  top: -25px;
-  right: 80px;
-  padding: 0 !important;
-}
-#block-secondarynavigation {
-  right: 40px;
-}
-#block-mainnavigation {
-  width: 100%;
-}
-#block-mainnavigation .small-screen-nav-trigger {
-  display: block !important;
-  position: absolute;
-  z-index: 1;
-  background: transparent url(../nav-trigger-bg.png) scroll no-repeat 10px 50%;
-  background-size: auto auto;
-  background-size: 20px;
-  padding: 10px 0 10px 10px;
-  width: 20px;
-  height: 20px;
-  overflow: hidden;
-  text-indent: 40px;
-  white-space: nowrap;
-  top: 50px;
-  right: 40px;
-  cursor: pointer;
-}
-#block-mainnavigation ul {
-  display: none;
-}
-#block-mainnavigation > ul {
-  padding: 0 20px;
-  margin: 0 0 20px 0;
-}
-#block-mainnavigation ul li {
-  display: block !important;
-  position: relative;
-}
-#block-mainnavigation .small-screen-nav-submenu-trigger {
-  position: absolute;
-  right: 0;
-  top: 8px;
-  cursor: pointer;
-}
-#block-mainnavigation .submenu .small-screen-nav-submenu-trigger {
-  top: 3px;
-  cursor: pointer;
-}
-#block-mainnavigation a {
-  padding: 10px 0;
-}
-#block-mainnavigation .menu-item--active-trail a {
-  border: none;
-  padding-bottom: 10px;
-}
-#block-mainnavigation a.is-active,
-#block-mainnavigation a:hover {
-  border: none;
-  padding-bottom: 10px;
-  color: #ccc;
-}
-#block-mainnavigation .submenu .submenu li.menu-item--expanded a:after {
-  content: none;
-}
-#block-subsubsection-navigation {
-  display: none;
-}
-#superheader .block-backtoqueensuniversityfacultyoflaw {
-  min-width: 0;
-  width: 100%;
-}
-//#block-mainnavigation .menu-item--active-trail .submenu {
-//  display: block;
-//  padding: 0 0 0 10px;
-//}
-//#block-mainnavigation .submenu {
-//  display: block !important;
-//}
-//#block-mainnavigation .submenu  h3{
-//  display: none;
-//}
-#block-mainnavigation .menu-item--active-trail .submenu h3 a,
-#block-mainnavigation .menu-item--active-trail .submenu h3 a:hover {
-  padding: 5px 0;
-}
-#block-mainnavigation .description {
-  display: none !important;
-}
-#block-mainnavigation .menu li + li {
-  margin-left: 0;
-}
-#block-mainnavigation .submenu,
-#block-mainnavigation .submenu .submenu,
-#block-mainnavigation .submenu .submenu .submenu,
-#block-mainnavigation .submenu .submenu .submenu .submenu {
-  display: none;
-}
-#block-mainnavigation .submenu {
-  margin-left: 10px;
-}
-#block-mainnavigation .submenu .menu .menu {
-  margin-left: 10px;
-}
-#block-mainnavigation .submenu li {
-  margin: 5px 0;
-  padding: 5px 0;
-}
-#block-mainnavigation .submenu li a.is-active {
-  color: #333;
-}
-#block-mainnavigation .submenu p,
-#block-mainnavigation .submenu .submenu {
-  margin-bottom: 0;
-}
-#block-mainnavigation .submenu .menu-item-content {
-  width: 100%;
-}
-#supercontent .block-views-block-features-block .feature-image,
-#supercontent .block-views-block-features-block .teaser-image,
-#supercontent .block-views-block-stories-front-block .feature-image,
-#supercontent .block-views-block-stories-front-block .teaser-image,
-#main .block-views-block-events-block .feature-image,
-#main .block-views-block-events-block .teaser-image,
-#main .block-views-block-events-block-alumni .feature-image,
-#main .block-views-block-events-block-alumni .teaser-image,
-#main .block-views-block-events-front-block .feature-image,
-#main .block-views-block-events-front-block .teaser-image,
-#main .block-views-block-speaker-events-block .feature-image,
-#main .block-views-block-speaker-events-block .teaser-image,
-#main .block-views-block-speaker-events-front-block .feature-image,
-#main .block-views-block-speaker-events-front-block .teaser-image {
-  width: 50%;
-  right: 50%;
-}
-#supercontent .block-views-block-features-block > div .fields > div,
-#supercontent .block-views-block-stories-front-block > div .fields > div,
-#main .block-views-block-events-block > div .fields > div,
-#main .block-views-block-events-block-alumni > div .fields > div,
-#main .block-views-block-events-front-block > div .fields > div,
-#main .block-views-block-speaker-events-block > div .fields > div,
-#main .block-views-block-speaker-events-front-block > div .fields > div {
-  padding-left: 50%;
-}
-#supercontent .block-views-block-stories-front-block .teaser-image,
-#main .block-views-block-events-block .teaser-image,
-#main .block-views-block-events-block-alumni .teaser-image,
-#main .block-views-block-events-front-block .teaser-image,
-#main .block-views-block-speaker-events-block .teaser-image,
-#main .block-views-block-speaker-events-front-block .teaser-image {
-  left: 50%;
-}
-#supercontent .block-views-block-stories-front-block > div .fields > div,
-#main .block-views-block-events-block > div .fields > div,
-#main .block-views-block-events-block-alumni > div .fields > div,
-#main .block-views-block-events-front-block > div .fields > div,
-#main .block-views-block-speaker-events-block > div .fields > div,
-#main .block-views-block-speaker-events-front-block > div .fields > div {
-  padding-left: 0;
-  padding-right: 50%;
-}
-.block-views-block-page-title-block .page-title-image,
-.block-pagetitle .page-title-image {
-  left: 50%;
-}
-.block-views-block-page-title-block .page-title-with-image > .fields > div,
-.block-pagetitle .page-title-with-image > .fields > div {
-  padding-right: 50%;
-}
-.block-views .view-people .views-row,
-.block-views .view-people .queenslaw-person,
-body.landing-page-directory .view-people .views-row,
-body.landing-page-directory .view-people .queenslaw-person,
-.block-queenslaw-people .views-row,
-.block-queenslaw-people .queenslaw-person {
-  width: 100%;
-  float: none;
-}
-.block-views .view-people .views-exposed .form-checkboxes .form-item,
-body.landing-page-directory .view-people .views-exposed .form-checkboxes .form-item,
-.block-queenslaw-people .views-exposed .form-checkboxes .form-item {
-  width: auto;
-}
-body.landing-page-directory .people-dynamic .clear-all-filters {
-  display: block;
-  margin: 15px 0 0 0;
-}
-body.queenslaw-main-site.page-programs-jd #main .queenslaw-teasers .teaser:nth-child(4),
-body.queenslaw-main-site.page-programs-jd #main .queenslaw-teasers .teaser:nth-child(5),
-body.queenslaw-main-site.page-programs-jd #main .queenslaw-teasers .teaser:nth-child(n + 6),
-body.has-queenslaw-alternate-teasers #main .queenslaw-teasers .teaser {
-  width: 50%;
-  height: 250px;
-}
-body.queenslaw-main-site.page-programs-jd #main .queenslaw-teasers .teaser:nth-child(6) {
-  background-color: #11335d;
-}
-body.queenslaw-main-site.page-programs-jd #main .queenslaw-teasers .teaser:nth-child(7) {
-  background-color: #eebd31;
-  color: #333;
-}
-body.queenslaw-main-site.page-programs-jd #main .queenslaw-teasers .teaser:nth-child(7) a,
-body.queenslaw-main-site.page-programs-jd #main .queenslaw-teasers .teaser:nth-child(7) .node-readmore a {
-  color: #333;
-  border-color: #333;
-}
-body.queenslaw-main-site.page-programs-jd #main .queenslaw-teasers .teaser:last-of-type {
-  width: 100%;
-}
 body,
 #subheader > div,
 .content-container,
@@ -252,59 +15,398 @@ body.sidebar-first #main,
   float: none;
   clear: both;
 }
+input,
+textarea,
+select {
+  font-size: 16px !important;
+}
+#superheader {
+  .block-backtoqueensuniversityfacultyoflaw {
+    min-width: 0;
+    width: 100%;
+  }
+}
+#header {
+  > div {
+    min-width: auto;
+    width: auto;
+    #branding {
+      margin-top: -20px;
+      top: 14px;
+      .block {
+        img {
+          height: 48px !important;
+        }
+      }
+      .block-system {
+        img {
+          height: 24px !important;
+        }
+      }
+    }
+    .block-searchform {
+      top: -25px;
+      right: 80px;
+      padding: 0 !important;
+    }
+    .header-content {
+      padding-top: 0;
+      float: left;
+      text-align: left;
+      padding: 0;
+      #block-mainnavigation {
+        float: none;
+         .small-screen-nav-trigger {
+          display: block !important;
+          position: absolute;
+          z-index: 1;
+          background: transparent url(../nav-trigger-bg.png) scroll no-repeat 10px 50%;
+          background-size: auto auto;
+          background-size: 20px;
+          padding: 10px 0 10px 10px;
+          width: 20px;
+          height: 20px;
+          overflow: hidden;
+          text-indent: 40px;
+          white-space: nowrap;
+          top: 50px;
+          right: 40px;
+          cursor: pointer;
+        }
+        .menu li + li {
+          margin-left: 0;
+        }
+        ul {
+          display: none;
+          li {
+            display: block !important;
+            position: relative;
+          }
+          .small-screen-nav-submenu-trigger {
+            position: absolute;
+            right: 0;
+            top: 8px;
+            cursor: pointer;
+          }
+          .submenu {
+            .small-screen-nav-submenu-trigger {
+              top: 3px;
+              cursor: pointer;
+            }
+            .submenu li.menu-item--expanded a:after {
+              content: none;
+            }
+          }
+          .menu-item--active-trail {
+            a {
+              border: none;
+              padding-bottom: 10px;
+            }
+          }
+        }
+        > ul {
+          padding: 0 20px;
+          margin: 0 0 20px 0;
+        }
+        a {
+          padding: 10px 0;
+        }
+        a.is-active,
+        a:hover {
+          border: none;
+          padding-bottom: 10px;
+          color: #ccc;
+        }
+        .menu-item--active-trail {
+          .submenu {
+            a, h3 a:hover{
+              padding: 5px 0;
+            }
+          }
+        }
+        .description {
+          display: none !important;
+        }
+        .submenu {
+          display: none;
+          margin-left: 10px;
+          li {
+            margin: 5px 0;
+            padding: 5px 0;
+            a.is-active {
+              color: #333;
+            }
+          }
+          p {
+            margin-bottom: 0;
+          }
+          .menu-item-content {
+            width: 100%;
+          }
+          .submenu {
+            display: none;
+            margin-left: 10px;
+            margin-bottom: 0;
+            .submenu {
+              display: none;
+              margin-left: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+#block-subsubsection-navigation {
+  display: none;
+}
+#supercontent {
+  .block-views-block-features-block {
+    .feature-image,
+    .teaser-image {
+      width: 50%;
+      right: 50%;
+    }
+    > div .fields > div {
+      padding-left: 50%;
+    }
+  }
+  .block-views-block-stories-front-block {
+    .feature-image,
+    .teaser-image {
+      width: 50%;
+      right: 50%;
+    }
+    .teaser-image {
+      left: 50%;
+    }
+    > div .fields > div {
+      padding-left: 0;
+      padding-right: 50%;
+    }
+  }
+}
+#main {
+  .block-views-block-events-block {
+    .feature-image,
+    .teaser-image {
+      width: 50%;
+      right: 50%;
+    }
+    > div .fields > div {
+      padding-left: 0;
+      padding-right: 50%;
+    }
+  }
+  .block-views-block-events-block-alumni {
+    .feature-image,
+    .teaser-image {
+      width: 50%;
+      right: 50%;
+    }
+    > div .fields > div {
+      padding-left: 0;
+      padding-right: 50%;
+    }
+    .teaser-image {
+      left: 50%;
+    }
+  }
+  .block-views-block-events-front-block {
+    width: 100%;
+    float: none;
+    .feature-image,
+    .teaser-image {
+      width: 50%;
+      right: 50%;
+    }
+    > div .fields > div {
+      padding-left: 0;
+      padding-right: 50%;
+    }
+    .teaser-image {
+      left: 50%;
+    }
+  }
+  .block-views-block-speaker-events-block {
+    .feature-image,
+    .teaser-image {
+      width: 50%;
+      right: 50%;
+    }
+    > div .fields > div {
+      padding-left: 0;
+      padding-right: 50%;;
+    }
+    .teaser-image {
+      left: 50%;
+    }
+  }
+  .block-views-block-speaker-events-front-block {
+    .feature-image,
+    .teaser-image {
+      width: 50%;
+      right: 50%;
+    }
+    > div .fields > div {
+      padding-left: 0;
+      padding-right: 50%;
+    }
+    .teaser-image {
+      left: 50%;
+    }
+  }
+  .block-views-block-ctas-block {
+    width: 100%;
+    float: none;
+  }
+  .block-views-block-hero-images-block {
+    .view-hero-images {
+      padding-bottom: 0;
+    }
+  }
+  .block-highlights {
+    ul {
+      padding-top: 50px;
+      width: 120px;
+      li {
+        position: static;
+        left: 20%;
+        margin-left: 20%;
+        margin-bottom: 20px;
+        display: block;
+      }
+      li + li p {
+        width: 120px;
+      }
+      li + li,
+      li + li + li,
+      li + li + li + li {
+        margin-left: 20%;
+      }
+    }
+  }
+}
 #sidebar {
   margin: 0 0 20px 0;
+  h1 {
+    font-size: 2.2em;
+  }
 }
-#sidebar h1 {
-  font-size: 2.2em;
+.block-views-block-page-title-block {
+  .page-title-image {
+    left: 50%;
+  }
+  .page-title-image {
+    left: 50%;
+  }
+  .page-title-with-image {
+    > .fields > div {
+      padding-right: 50%;
+    }
+  }
 }
-#main .block-views-block-ctas-block {
-  width: 100%;
-  float: none;
+.block-pagetitle {
+  .page-title-with-image {
+    > .fields > div {
+      padding-right: 50%;
+    }
+  }
 }
-#main .block-views-block-events-front-block {
-  width: 100%;
-  float: none;
+.block-views {
+  .view-people {
+    .views-row {
+      width: 100%;
+      float: none;
+    }
+    .queenslaw-person {
+      width: 100%;
+      float: none;
+    }
+    .views-exposed .form-checkboxes .form-item {
+      width: auto;
+    }
+  }
 }
-.block-views-block-hero-images-block .view-hero-images {
-  padding-bottom: 0;
+body.landing-page-directory {
+  .view-people {
+    .views-row {
+      width: 100%;
+      float: none;
+    }
+    .queenslaw-person {
+      width: 100%;
+      float: none;
+    }
+    .views-exposed .form-checkboxes .form-item {
+      width: auto;
+    }
+  }
+  .people-dynamic .clear-all-filters {
+    display: block;
+    margin: 15px 0 0 0;
+  }
 }
-#main .block-highlights ul {
-  padding-top: 50px;
+.block-queenslaw-people {
+  .views-row {
+    width: 100%;
+    float: none;
+  }
+  .queenslaw-person {
+    width: 100%;
+    float: none;
+  }
+  .views-exposed .form-checkboxes .form-item {
+    width: auto;
+  }
 }
-#main .block-highlights ul li {
-  position: static;
-  left: 20%;
-  margin-left: 20%;
-  margin-bottom: 20px;
-  display: block;
+body.queenslaw-main-site.page-programs-jd {
+  #main {
+    .queenslaw-teasers {
+      .teaser,
+      .teaser:nth-child(4),
+      .teaser:nth-child(5),
+      .teaser:nth-child(n + 6) {
+        width: 50%;
+        height: 250px;
+      }
+      .teaser:nth-child(6) {
+        background-color: #11335d;
+      }
+      .teaser:nth-child(7) {
+        background-color: #eebd31;
+        color: #333;
+        a, .node-readmore a {
+          color: #333;
+          border-color: #333;
+        }
+      }
+      .teaser:last-of-type {
+        width: 100%;
+      }
+    }
+  }
 }
-#main .block-highlights ul li + li p {
-  width: 120px;
+.view-taxonomy-term {
+  .teaser, .views-row {
+    width: 50%;
+  }
+  .teaser:nth-child(4n + 1), .views-row:nth-child(2n + 1) {
+    clear: both;
+  }
 }
-#main .block-highlights ul li + li,
-#main .block-highlights ul li + li + li,
-#main .block-highlights ul li + li + li + li {
-  margin-left: 20%;
+.queenslaw-teasers {
+  .teaser, .views-row {
+    width: 50%;
+  }
+  .teaser:nth-child(2n + 1), .views-row:nth-child(2n + 1) {
+    clear: both;
+  }
 }
-#main .block-views-block-speaker-events-front-block > div .fields > div {
-  padding-left: 0;
-}
-.view-taxonomy-term .teaser,
-.view-taxonomy-term .views-row,
-.queenslaw-teasers .teaser,
-.queenslaw-teasers .views-row {
-  width: 50%;
-}
-.view-taxonomy-term .teaser:nth-child(4n + 1),
-.view-taxonomy-term .views-row:nth-child(2n + 1),
-.queenslaw-teasers .teaser:nth-child(2n + 1),
-.queenslaw-teasers .views-row:nth-child(2n + 1) {
-  clear: both;
-}
-#superfooter .block-type-contact,
-#superfooter .block-facultyoflaw {
-  width: 70%;
+#superfooter {
+  .block-type-contact, .block-facultyoflaw {
+    width: 70%;
+  }
 }
 img.parallax-slider {
   max-width: unset !important;
