@@ -137,7 +137,12 @@ body.queenslaw-main-site.front {
       box-shadow: inset 0 0 0 1000px rgba(255,255,255,.70);
     }
   }
-  .block-views-block-ctas-block,
+  .block-views-block-ctas-block {
+    width: 100%;
+    .views-row {
+      width: 100%;
+    }
+  }
   .block-views-block-events-front-block {
     width: 100%;
   }
