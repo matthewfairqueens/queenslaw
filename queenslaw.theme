@@ -9,6 +9,7 @@ use Drupal\Component\Utility\Html;
  */
 function queenslaw_preprocess_html(&$variables) {
   $main_site_hosts = [
+    'law.queensu.ca:81', // ***** TEMP
     'law.queensu.ca',
     'law.queensu.jumphost.ca',
     'local.law.queensu.ca',
