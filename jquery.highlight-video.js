@@ -11,7 +11,8 @@
       $('#block-highlightvideo iframe').wrap('<div id="queenslaw-highlight-video"/>');
       var video_html_id = $('#queenslaw-highlight-video iframe').attr('id');
       var video_html_id_parts = video_html_id.split('-');
-      var video_id = video_html_id_parts[video_html_id_parts.length - 1];
+      video_html_id_parts.shift();
+      var video_id = video_html_id_parts.join('-');
       $('#queenslaw-highlight-video iframe').remove();
       var player;
       YTdeferred.done(function(YT){
