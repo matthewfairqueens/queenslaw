@@ -334,13 +334,16 @@ body.queenslaw-main-site.page-programs-jd {
   .page-title-with-image {
     left: 0;
     width: 100%;
-    height: 160px;
+    height: auto;
     position: relative;
     > .fields > div {
       padding-right: 0;
       width: 100%;
       height: auto;
       display: block;
+    }
+    .page-title-image {
+      display: none;
     }
   }
 }
@@ -356,13 +359,16 @@ body.queenslaw-main-site.page-programs-jd {
   .page-title-with-image {
     left: 0;
     width: 100%;
-    height: 160px;
+    height: auto;
     position: relative;
     > .fields > div {
       padding-right: 0;
       width: 100%;
       height: auto;
       display: block;
+    }
+    .page-title-image {
+      display: none;
     }
   }
 }
