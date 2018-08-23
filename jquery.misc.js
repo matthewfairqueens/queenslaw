@@ -1,19 +1,5 @@
 (function ($){
   $(document).ready(function(){
-/*    var window_width = $(window).width();
-    var new_window_width = window_width;
-    // add / remove the body class if the size crosses the max width breakpoint
-    var context = '';
-    $('body').removeClass('max-width');
-    if (window_width >= 1440) $('body').addClass('max-width');
-    $(window).resize(function() {
-      new_window_width = $(window).width();
-      if (new_window_width != window_width) {
-        window_width = $(window).width();
-        if (window_width >= 1440) $('body').addClass('max-width');
-        else $('body').removeClass('max-width');
-      }
-    });*/
     // wrap videos in body fields
     $('#content .node .field--name-body iframe[src*="youtube"]').wrap('<div class="queenslaw-video-container"></div>');
     // add parallax effect to the "Sir John A. Macdonald Hall" block
@@ -25,6 +11,22 @@
       $(this).parallax({
         imageSrc: background_image
       });
+    });
+    // add an arrow to home page features and stories
+    $('body.queenslaw-main-site.front article.feature .fields > div > div, body.queenslaw-main-site.front article.story .fields > div > div').append('<div class="queenslaw-arrow"/>');
+    // If any of these elements on the main site home page contain only a single link,
+    // link the whole element.
+    $('body.queenslaw-main-site.front article.feature, body.queenslaw-main-site.front article.story .fields, body.queenslaw-main-site.front article.event .fields, body.queenslaw-main-site.front article.speaker_event .fields, body.queenslaw-main-site.front .view-ctas .views-row').addClass('queenslaw-main-site-front-element');
+    var href;
+    $('.queenslaw-main-site-front-element a:not(h3 > a)').addClass('queenslaw-main-site-front-element-link');
+    $('.queenslaw-main-site-front-element').each(function(){
+      if ($(this).find('a.queenslaw-main-site-front-element-link').length == 1) {
+        $(this).click(function(){
+          href = $(this).find('a.queenslaw-main-site-front-element-link').attr('href');
+          $(location).attr('href', href);
+        });
+        $(this).addClass('queenslaw-main-site-front-element-linked');
+      }
     });
   });
 }(jQuery));

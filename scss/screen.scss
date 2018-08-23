@@ -259,9 +259,6 @@ body.queenslaw-main-site #branding .block-logo svg {
   height: 30px;
   padding-top: 0;
 }
-body.queenslaw-main-site #block-mainnavigation span.ext {
-  display: inline;
-}
 body.queenslaw-sub-site #branding .block-queensuniversity {
   border-right-color: $white;
 }
@@ -380,11 +377,17 @@ body.queenslaw-sub-site #branding .block-queensuniversity {
       font-family: FontAwesome;
     }
   }
+  span.ext {
+    display: inline;
+  }
 }
 body.queenslaw-sub-site #block-mainnavigation {
   .menu-item--active-trail a,
   a:hover {
     border-bottom-color: $white;
+  }
+  span.ext {
+    display: none;
   }
 }
 .block-searchform {
@@ -631,7 +634,7 @@ body.submenu-visible #block-subsubsection-navigation {
     background-color: transparent;
   }
 }
-#main .block-views-block-speaker-events-front-block { 
+#main .block-views-block-speaker-events-front-block {
   h2 {
     margin: 0;
     background-color: $yellow;
@@ -1211,6 +1214,28 @@ body.queenslaw-main-site.front #content {
   background: url(../highlights-bg.jpg) center center / cover no-repeat scroll padding-box padding-box $black;
   height: 760px;
   color: $white;
+}
+body.queenslaw-main-site.front .queenslaw-arrow {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin: -40px 0 0 -32px;
+  border: 40px solid transparent;
+  border-right-color: $blue;
+  border-left: none;
+  width: 0;
+  height: 0;
+}
+body.queenslaw-main-site.front .block-views-block-stories-front-block .queenslaw-arrow {
+  right: 0;
+  left: auto;
+  margin-right: -32px;
+  margin-left: 0;
+  border-right: none;
+  border-left: 40px solid $yellow;
+}
+body.queenslaw-main-site.front .queenslaw-main-site-front-element-linked {
+  cursor: pointer;
 }
 body.queenslaw-main-site.front #block-queenslaw-local-tasks {
   position: relative;
