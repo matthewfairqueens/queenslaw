@@ -259,6 +259,9 @@ body.queenslaw-main-site #branding .block-logo svg {
   height: 30px;
   padding-top: 0;
 }
+body.queenslaw-main-site #block-mainnavigation span.ext {
+  display: inline;
+}
 body.queenslaw-sub-site #branding .block-queensuniversity {
   border-right-color: $white;
 }
