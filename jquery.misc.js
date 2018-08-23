@@ -13,10 +13,10 @@
       });
     });
     // add an arrow to home page features and stories
-    $('body.queenslaw-main-site.front article.feature .fields > div > div, body.queenslaw-main-site.front article.story .fields > div > div').append('<div class="queenslaw-arrow"/>');
+    $('body.queenslaw-main-site.front.standard-screen article.feature .fields > div > div, body.queenslaw-main-site.front.standard-screen article.story .fields > div > div').append('<div class="queenslaw-arrow"/>');
     // If any of these elements on the main site home page contain only a single link,
     // link the whole element.
-    $('body.queenslaw-main-site.front article.feature, body.queenslaw-main-site.front article.story .fields, body.queenslaw-main-site.front article.event .fields, body.queenslaw-main-site.front article.speaker_event .fields, body.queenslaw-main-site.front .view-ctas .views-row').addClass('queenslaw-main-site-front-element');
+    $('body.queenslaw-main-site.front.standard-screen article.feature, body.queenslaw-main-site.front.standard-screen article.story .fields, body.queenslaw-main-site.front.standard-screen article.event .fields, body.queenslaw-main-site.front.standard-screen article.speaker_event .fields, body.queenslaw-main-site.front.standard-screen .view-ctas .views-row').addClass('queenslaw-main-site-front-element');
     var href;
     $('.queenslaw-main-site-front-element a:not(h3 > a)').addClass('queenslaw-main-site-front-element-link');
     $('.queenslaw-main-site-front-element').each(function(){
