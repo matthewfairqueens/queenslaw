@@ -28,5 +28,15 @@
         $(this).addClass('queenslaw-main-site-front-element-linked');
       }
     });
+    // adjust wrap of some menu items
+    var items = new Array();
+    items['graduate-diploma-in-legal-services-management'] = 'Legal Services Management';
+    for (var i in items) {
+      if ($('#block-mainnavigation .menu-item--' + i).length) {
+        var item_text = $('#block-mainnavigation .menu-item--' + i + ' a').text();
+        item_text = item_text.replace(items[i], '<span class="phrase">' + items[i] + '</span>');
+        $('#block-mainnavigation .menu-item--' + i + ' a').html(item_text);
+      }
+    }
   });
 }(jQuery));

@@ -278,6 +278,9 @@ body.queenslaw-sub-site #branding .block-queensuniversity {
     display: block;
     padding-bottom: 24px;
     font-weight: $bold-font-weight;
+    .phrase {
+      white-space: nowrap;
+    }
   }
   .menu-item--active-trail a,
   a:hover {
