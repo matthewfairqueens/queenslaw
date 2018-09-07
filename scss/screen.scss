@@ -1865,9 +1865,6 @@ body.has-queenslaw-alternate-teasers #main .queenslaw-teasers {
   .teaser-a-unique-online-way-to-learn-the-law {
     background-color: $blue;
   }
-  .teaser-courses {
-    background-color: $blue;
-  }
   .teaser:not(.has-children) {
     > .content {
       padding-right: 60px;
@@ -1896,6 +1893,9 @@ body.has-queenslaw-alternate-teasers #main .queenslaw-teasers {
   }
   .teaser:nth-child(even) {
     background-color: $red;
+  }
+  .teaser-courses {
+    background-color: $blue;
   }
   article {
     + ul {
