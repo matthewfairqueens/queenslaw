@@ -1850,7 +1850,7 @@ body.has-queenslaw-alternate-teasers #main .queenslaw-teasers {
     background-attachment: scroll;
     background-origin: padding-box;
     background-clip: padding-box;
-    background-color: $dark-grey;
+    background-color: $medium-grey;
     padding: 0;
     width: $one-third;
     height: 200px;
@@ -1863,6 +1863,9 @@ body.has-queenslaw-alternate-teasers #main .queenslaw-teasers {
     }
   }
   .teaser-a-unique-online-way-to-learn-the-law {
+    background-color: $blue;
+  }
+  .teaser-courses {
     background-color: $blue;
   }
   .teaser:not(.has-children) {
