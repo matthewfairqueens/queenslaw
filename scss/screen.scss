@@ -2196,8 +2196,7 @@ body.landing-page-directory .view-people,
     .views-row:nth-child(2n + 1) {
       clear: none;
     }
-    .views-row-even,
-    .views-row-even:nth-child(2n + 1) {
+    .views-row:nth-child(even) {
       clear: left;
     }
   }
