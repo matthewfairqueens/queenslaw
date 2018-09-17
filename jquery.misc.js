@@ -14,18 +14,18 @@
     });
     // add an arrow to home page features and stories
     $('body.queenslaw-main-site.front.standard-screen article.feature .fields > div > div, body.queenslaw-main-site.front.standard-screen article.story .fields > div > div').append('<div class="queenslaw-arrow"/>');
-    // If any of these elements on the main site home page contain only a single link,
-    // link the whole element.
-    $('body.queenslaw-main-site.front.standard-screen article.feature, body.queenslaw-main-site.front.standard-screen article.story .fields, body.queenslaw-main-site.front.standard-screen article.event .fields, body.queenslaw-main-site.front.standard-screen article.speaker_event .fields, body.queenslaw-main-site.front.standard-screen .view-ctas .views-row').addClass('queenslaw-main-site-front-element');
+    // If any of these elements on the main site home page or events landing page contain
+    // only a single link, link the whole element.
+    $('body.queenslaw-main-site.front.standard-screen article.feature, body.queenslaw-main-site.front.standard-screen article.story .fields, body.queenslaw-main-site.front.standard-screen article.event .fields, body.queenslaw-main-site.front.standard-screen article.speaker_event .fields, body.queenslaw-main-site.front.standard-screen .view-ctas .views-row, body.queenslaw-main-site.landing-page-events.standard-screen .view-events .views-row .fields').addClass('queenslaw-main-site-linked-element');
     var href;
-    $('.queenslaw-main-site-front-element a:not(h3 > a)').addClass('queenslaw-main-site-front-element-link');
-    $('.queenslaw-main-site-front-element').each(function(){
-      if ($(this).find('a.queenslaw-main-site-front-element-link').length == 1) {
+    $('.queenslaw-main-site-linked-element a:not(h3 > a)').addClass('queenslaw-main-site-linked-element-link');
+    $('.queenslaw-main-site-linked-element').each(function(){
+      if ($(this).find('a.queenslaw-main-site-linked-element-link').length == 1) {
         $(this).click(function(){
-          href = $(this).find('a.queenslaw-main-site-front-element-link').attr('href');
+          href = $(this).find('a.queenslaw-main-site-linked-element-link').attr('href');
           $(location).attr('href', href);
         });
-        $(this).addClass('queenslaw-main-site-front-element-linked');
+        $(this).addClass('queenslaw-main-site-linked-element-linked');
       }
     });
     // adjust wrap of some menu items
