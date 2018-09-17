@@ -16,9 +16,7 @@ $light-grey: #ccc;
 $lighter-grey: #ddd;
 $lightest-grey: #eee;
 $red: #9d1939;
-$red-rgb: 157, 25, 57;
 $blue: #11335d;
-$blue-rgb: 17, 51, 93;
 $yellow: #eebd31;
 $orange: #de7736;
 
@@ -1248,7 +1246,7 @@ body.has-queenslaw-alternate-teasers .content-container {
     td.single-day.today,
     td.multi-day.starts-today,
     td.multi-day.ends-today {
-      border-color: rgba($red-rgb, 0.75);
+      border-color: $red;
     }
     td,
     .month-view .full .inner div.monthview,
@@ -1261,7 +1259,7 @@ body.has-queenslaw-alternate-teasers .content-container {
       color: $grey;
     }
     div.monthview {
-      background-color: rgba($blue-rgb, 0.1);
+      background-color: rgba(17, 51, 93, 0.1);
     }
     div.monthview .cutoff,
     div.monthview .continues {
