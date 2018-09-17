@@ -2201,8 +2201,9 @@ body.landing-page-directory .view-people,
     }
   }
 }
-// the directory might have hidden rows, so clear is handled dynamically
-body.landing-page-directory .people-dynamic {
+// the directories might have hidden rows, so clear is handled dynamically
+body.landing-page-directory .people-dynamic,
+#block-views-block-people-faculty-block .people-dynamic {
   .views-row:nth-child(2n + 1) {
     clear: none;
   }
@@ -2262,7 +2263,8 @@ body.landing-page-directory .people-dynamic {
     @include border-radius(50%);
   }
 }
-body.landing-page-directory .people-dynamic.empty .people-dynamic-empty {
+body.landing-page-directory .people-dynamic.empty .people-dynamic-empty,
+#block-views-block-people-faculty-block .people-dynamic.empty .people-dynamic-empty {
   display: block;
 }
 body.sidebar-first .block-views-block-people-block,
