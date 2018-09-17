@@ -502,10 +502,12 @@ body.submenu-visible #subheader {
 #subheader .quick-nav-active + .block-queenslaw-breadcrumbs {
   padding-left: 0;
 }
-#block-subsubsection-navigation + .block-queenslaw-breadcrumbs ol {
+#block-subsubsection-navigation + .block-queenslaw-breadcrumbs ol,
+#block-secondary-subnavigation + .block-queenslaw-breadcrumbs ol {
   padding-left: 20px;
 }
-#block-subsubsection-navigation {
+#block-subsubsection-navigation,
+#block-secondary-subnavigation {
   position: absolute;
   top: -1px;
   left: 0;
@@ -555,11 +557,13 @@ body.submenu-visible #subheader {
     color: $red;
   }
 }
-body.submenu-visible #block-subsubsection-navigation {
+body.submenu-visible #block-subsubsection-navigation,
+body.submenu-visible #block-secondary-subnavigation {
   top: 0;
   border-top: none;
 }
-#block-subsubsection-navigation.quick-nav-active {
+#block-subsubsection-navigation.quick-nav-active,
+#block-secondary-subnavigation.quick-nav-active {
   > h2 {
     padding-right: 40px;
     width: auto;

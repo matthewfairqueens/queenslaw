@@ -32,17 +32,18 @@
       $('#subheader').css('top', '0');
       event.preventDefault();
     });
-    $('body.queenslaw-main-site.standard-screen #block-subsubsection-navigation > h2').prepend('<a href="#quick-nav-toggle" class="quick-nav-toggle">Open</a>');
-    $('body.queenslaw-main-site.standard-screen #block-subsubsection-navigation .quick-nav-toggle').click(function(event){
-      if ($(this).parents('#block-subsubsection-navigation').hasClass('quick-nav-active')) {
-        $(this).parents('#block-subsubsection-navigation').removeClass('quick-nav-active');
+    $('#block-subsubsection-navigation, #block-secondary-subnavigation').addClass('queenslaw-quick-nav');
+    $('body.queenslaw-main-site.standard-screen .queenslaw-quick-nav > h2')prepend('<a href="#quick-nav-toggle" class="quick-nav-toggle">Open</a>');
+    $('body.queenslaw-main-site.standard-screen .queenslaw-quick-nav .quick-nav-toggle').click(function(event){
+      if ($(this).parents('.queenslaw-quick-nav').hasClass('quick-nav-active')) {
+        $(this).parents('.queenslaw-quick-nav').removeClass('quick-nav-active');
         $(this).text('Open');
         $('#subheader').css('padding-left', '20px');
       }
       else {
-        $(this).parents('#block-subsubsection-navigation').addClass('quick-nav-active');
+        $(this).parents('.queenslaw-quick-nav').addClass('quick-nav-active');
         $(this).text('Close');
-        var quick_nav_width = $(this).parents('#block-subsubsection-navigation').outerWidth();
+        var quick_nav_width = $(this).parents('.queenslaw-quick-nav').outerWidth();
         $('#subheader').css('padding-left', quick_nav_width + 'px');
       }
       event.preventDefault();

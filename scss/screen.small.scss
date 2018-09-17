@@ -81,7 +81,8 @@ body.queenslaw-main-site.front {
     height: 200px;
   }
 }
-#block-subsubsection-navigation + .block-queenslaw-breadcrumbs ol {
+#block-subsubsection-navigation + .block-queenslaw-breadcrumbs ol,
+#block-secondary-subnavigation + .block-queenslaw-breadcrumbs ol {
   padding-left: 0;
 }
 #supercontent {
