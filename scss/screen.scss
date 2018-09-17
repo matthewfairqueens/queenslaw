@@ -503,11 +503,13 @@ body.submenu-visible #subheader {
   padding-left: 0;
 }
 #block-subsubsection-navigation + .block-queenslaw-breadcrumbs ol,
-#block-secondary-subnavigation + .block-queenslaw-breadcrumbs ol {
+#block-secondary-subnavigation + .block-queenslaw-breadcrumbs ol,
+#block-calendar-subnavigation + .block-queenslaw-breadcrumbs ol {
   padding-left: 20px;
 }
 #block-subsubsection-navigation,
-#block-secondary-subnavigation {
+#block-secondary-subnavigation,
+#block-calendar-subnavigation {
   position: absolute;
   top: -1px;
   left: 0;
@@ -558,12 +560,14 @@ body.submenu-visible #subheader {
   }
 }
 body.submenu-visible #block-subsubsection-navigation,
-body.submenu-visible #block-secondary-subnavigation {
+body.submenu-visible #block-secondary-subnavigation,
+body.submenu-visible #block-calendar-subnavigation {
   top: 0;
   border-top: none;
 }
 #block-subsubsection-navigation.quick-nav-active,
-#block-secondary-subnavigation.quick-nav-active {
+#block-secondary-subnavigation.quick-nav-active,
+#block-calendar-subnavigation.quick-nav-active {
   > h2 {
     padding-right: 40px;
     width: auto;

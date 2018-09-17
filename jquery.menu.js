@@ -32,7 +32,7 @@
       $('#subheader').css('top', '0');
       event.preventDefault();
     });
-    $('#block-subsubsection-navigation, #block-secondary-subnavigation').addClass('queenslaw-quick-nav');
+    $('#block-subsubsection-navigation, #block-secondary-subnavigation, #block-calendar-subnavigation').addClass('queenslaw-quick-nav');
     $('body.queenslaw-main-site.standard-screen .queenslaw-quick-nav > h2').prepend('<a href="#quick-nav-toggle" class="quick-nav-toggle">Open</a>');
     $('body.queenslaw-main-site.standard-screen .queenslaw-quick-nav .quick-nav-toggle').click(function(event){
       if ($(this).parents('.queenslaw-quick-nav').hasClass('quick-nav-active')) {

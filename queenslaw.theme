@@ -159,6 +159,13 @@ function queenslaw_preprocess_breadcrumb(&$variables) {
     $discard = array_pop($variables['breadcrumb']);
     if (isset($_GET['keys']) && ($_GET['keys'] != '')) $variables['breadcrumb'][] = ['text' => t('Search Results')];
   }
+  elseif ((count($path_parts) >= 3) && ($path_parts[1] == 'calendar') && (ctype_digit($path_parts[0]))) {
+    if ($time = strtotime("{$path_parts[0]}01 12:00:00")) {
+      $month = date('F Y', $time);
+      $discard = array_pop($variables['breadcrumb']);
+      $variables['breadcrumb'][] = ['text' => $month];
+    }
+  }
 }
 /**
  * Generate an id and classes based on a title.
