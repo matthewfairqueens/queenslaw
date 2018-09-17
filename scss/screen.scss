@@ -2181,6 +2181,9 @@ body.landing-page-directory .view-people,
     }
   }
 }
+.block-views .view-people .views-exposed .form-checkboxes .form-item {
+  width: $one-third;
+}
 .block-views-block-people-faculty-by-research-area-block {
   .views-row-set {
     clear: both;
