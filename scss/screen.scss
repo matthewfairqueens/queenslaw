@@ -1230,6 +1230,13 @@ body.has-queenslaw-alternate-teasers .content-container {
       border: none;
       white-space: nowrap;
     }
+    nav ul:after {
+      content: '.';
+      display: block;
+      height: 0;
+      clear: both;
+      visibility: hidden;
+    }
     tr {
       font-size: 1em;
       background-color: transparent;
