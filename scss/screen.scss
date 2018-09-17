@@ -16,7 +16,9 @@ $light-grey: #ccc;
 $lighter-grey: #ddd;
 $lightest-grey: #eee;
 $red: #9d1939;
+$red-rgb: 157, 25, 57;
 $blue: #11335d;
+$blue-rgb: 17, 51, 93;
 $yellow: #eebd31;
 $orange: #de7736;
 
@@ -1222,6 +1224,64 @@ body.has-queenslaw-alternate-teasers .content-container {
     }
     li.is-active a {
       text-decoration: underline;
+    }
+  }
+  .calendar {
+    font-size: 1em;
+    nav.pager {
+      border: none;
+      white-space: nowrap;
+    }
+    tr {
+      font-size: 1em;
+      background-color: transparent;
+    }
+    th,
+    td {
+      border-color: $lighter-grey;
+    }
+    th {
+      background-color: $lightest-grey;
+      font-weight: $bold-font-weight;
+    }
+    td.date-box.today,
+    td.single-day.today,
+    td.multi-day.starts-today,
+    td.multi-day.ends-today {
+      border-color: rgba($red-rgb, 0.75);
+    }
+    td,
+    .month-view .full .inner div.monthview,
+    .month-view .full td.multi-day div.monthview {
+      @include border-radius(0);
+      color: $dark-grey;
+    }
+    td.empty {
+      background-color: $lightest-grey;
+      color: $grey;
+    }
+    div.monthview {
+      background-color: rgba($blue-rgb, 0.1);
+    }
+    div.monthview .cutoff,
+    div.monthview .continues {
+      background-color: transparent;
+    }
+    .item {
+      font-size: 0.875em;
+    }
+    td.today .item + .item {
+      border-top-color: $lighter-grey;
+    }
+    .item:after {
+      content: '.';
+      display: block;
+      height: 0;
+      clear: both;
+      visibility: hidden;
+    }
+    .item a {
+      display: block;
     }
   }
   .view-recent-publications li * {
