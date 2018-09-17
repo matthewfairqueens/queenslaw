@@ -1137,6 +1137,9 @@ body.has-queenslaw-alternate-teasers .content-container {
       font-weight: $bold-font-weight;
       color: $dark-grey;
     }
+    a:hover {
+      text-decoration: underline;
+    }
   }
   .queenslaw-teasers article + ul {
     padding-left: 0;
