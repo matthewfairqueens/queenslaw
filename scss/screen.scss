@@ -583,6 +583,7 @@ body.submenu-visible #block-calendar-subnavigation {
 #supercontent .block-views-block-stories-front-block,
 #main .block-views-block-events-block,
 #main .block-views-block-events-block-alumni,
+#main .block-views-block-events-block-speakers,
 #supercontent .block-views-block-events-front-block,
 #main .block-views-block-speaker-events-block,
 #main .block-views-block-speaker-events-front-block {
@@ -661,6 +662,7 @@ body.submenu-visible #block-calendar-subnavigation {
 #supercontent .block-views-block-stories-front-block,
 #main .block-views-block-events-block,
 #main .block-views-block-events-block-alumni,
+#main .block-views-block-events-block-speakers,
 #supercontent .block-views-block-events-front-block,
 #main .block-views-block-speaker-events-block,
 #main .block-views-block-speaker-events-front-block {
@@ -709,6 +711,7 @@ body.submenu-visible #block-calendar-subnavigation {
 }
 #main .block-views-block-events-block,
 #main .block-views-block-events-block-alumni,
+#main .block-views-block-events-block-speakers,
 #supercontent .block-views-block-events-front-block,
 #main .block-views-block-speaker-events-block,
 #main .block-views-block-speaker-events-front-block {
@@ -777,6 +780,7 @@ body.submenu-visible #block-calendar-subnavigation {
 }
 #main .block-views-block-events-block .views-row:nth-child(even),
 #main .block-views-block-events-block-alumni .views-row:nth-child(even),
+#main .block-views-block-events-block-speakers .views-row:nth-child(even),
 #main .block-views-block-speaker-events-block .views-row:nth-child(even) {
   .fields > div {
     padding-right: 0;
@@ -791,6 +795,7 @@ body.submenu-visible #block-calendar-subnavigation {
 .block-views-block-stories-front-block,
 .block-views-block-events-block,
 .block-views-block-events-block-alumni,
+#main .block-views-block-events-block-speakers,
 .block-views-block-events-front-block,
 .block-views-block-speaker-events-block,
 .block-views-block-speaker-events-front-block,
