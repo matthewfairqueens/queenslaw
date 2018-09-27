@@ -59,8 +59,8 @@ a {
   color: $grey;
 }
 
-a.mappin {
-  content: '\f3c5';
+a.mappin:before {
+  content: '\f041';
   font-family: FontAwesome;
   font-size: 1.2em;
 }
