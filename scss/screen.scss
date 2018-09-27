@@ -58,6 +58,13 @@ a {
   text-decoration: none;
   color: $grey;
 }
+
+a.mappin {
+  content: '\f3c5';
+  font-family: FontAwesome;
+  font-size: 1.2em;
+}
+
 .form-item,
 .form-actions {
   margin-top: 0;
