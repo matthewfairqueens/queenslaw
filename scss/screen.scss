@@ -49,7 +49,6 @@ body {
 }
 figure {
   margin: 0;
-  width: 48%;
 }
 strong {
   font-weight: $bold-font-weight;
@@ -1175,10 +1174,11 @@ body.has-queenslaw-alternate-teasers .content-container {
     margin: 0;
   }
   figure {
-    margin-bottom: 24px;
+    margin: 24px 24px 24px 0;
+    width: 48%;
     figcaption {
       border-bottom: 1px solid $light-grey;
-      padding: 8px 0 12px 0;
+      padding: 8px 27px 12px 0;
       font-size: 0.875em;
     }
   }
