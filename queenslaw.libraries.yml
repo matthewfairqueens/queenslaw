@@ -2,7 +2,6 @@ global:
   version: 1.x
   css:
     theme:
-      # https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css: false
       https://pro.fontawesome.com/releases/v5.3.1/css/all.css: {type: external}
       css/screen.css: {media: screen}
       css/screen.medium.css: {media: screen and (max-width: 959px)}
