@@ -10,3 +10,4 @@ sass_dir = 'scss'
 # While in Dev, we can use this feature to easily debug the CSS styles
 line_comments = true
 
+sourcemap = true
