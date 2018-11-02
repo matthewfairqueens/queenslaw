@@ -22,7 +22,7 @@
     <div>
       <div>
         {% for field_key, field in fields -%}
-          {%- if field_key not in ['field_title_image', 'field_title_image_1'] -%}
+          {%- if field_key not in ['field_title_image', 'field_title_image_1', 'field_background_position'] -%}
             {{ field.separator }}
             {%- if field.wrapper_element -%}
               <{{ field.wrapper_element }}{{ field.wrapper_attributes }}>
