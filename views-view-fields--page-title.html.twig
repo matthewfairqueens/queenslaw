@@ -11,7 +11,7 @@
 %}
 <div{{ attributes.addClass(classes) }}>
   {%- if image -%}
-    <div class="page-title-image" style="background-image: url({{ image }}); {%- if position -%}background-position: {{ position }}{%- endif -%}"></div>
+    <div class="page-title-image" style="background-image: url({{ image }}); background-position: {%- if position -%}{{ position }}{% else %}75% 25%{%- endif -%};"></div>
     {%- if caption -%}
       <div class="page-title-image-caption">
         <div class="caption">{{ caption }}</div>
