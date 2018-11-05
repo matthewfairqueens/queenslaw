@@ -34,6 +34,14 @@ function queenslaw_theme_suggestions_image_formatter_alter(array &$suggestions, 
   $suggestions[] = 'image_formatter__' . $entity->getEntityTypeId() . '__' . $entity->bundle() . '__' . $field_name;
 }
 
+
+
+function queenslaw_preprocess_image_formatter (&$variables) {
+  $node = \Drupal::routeMatch()->getParameter('node');
+  $variables['node'] = $node;
+}
+
+
 /**
  * Implements template_preprocess_node().
  *
