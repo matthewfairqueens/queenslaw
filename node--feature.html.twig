@@ -1,5 +1,5 @@
 {% set image = content.field_feature_image|render|striptags|trim %}
-{% set backgroundposition = node.field_background_position.value|trim %}
+{% set backgroundposition = node.field_background_position.value %}
 {%
   set classes = [
     'node',

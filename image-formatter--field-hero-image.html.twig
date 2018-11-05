@@ -7,7 +7,7 @@
 {% if image_style %}
   {% set image_uri = image_uri | image_style(image_style) %}
 {% endif %}
-{% set backgroundposition = node.field_background_position.value|trim %}
+{% set backgroundposition = node.field_background_position.value %}
 
 <div class="image">
   <div style="background-image: url({{ image_uri }}); background-position: {% if backgroundposition %}{{ backgroundposition }}{% else %}75% 25%{% endif %};"></div>
