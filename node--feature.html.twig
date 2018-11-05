@@ -1,4 +1,5 @@
 {% set image = content.field_feature_image|render|striptags|trim %}
+{% set backgroundposition = node.field_background_position.value|trim %}
 {%
   set classes = [
     'node',
@@ -10,7 +11,7 @@
   ]
 %}
 <article{{ attributes.addClass(classes) }}>
-  <div class="feature-image" style="background-image: url({{ image }})"></div>
+  <div class="feature-image" style="background-image: url({{ image }}); background-position: {% if backgroundposition %}{{ backgroundposition }}{% else %}75% 25%{% endif %};"></div>
   <div class="fields">
     <div>
       <div>
@@ -46,3 +47,5 @@
     </div>
   </div>
 </article>
+
+
