@@ -263,9 +263,12 @@ body.queenslaw-sub-site #header {
   }
 }
 body.queenslaw-sub-site #branding {
-  .block-queensuniversity .field--name-body {
-    border-right-color: $white;
-    margin-top: 14px;
+  .block-queensuniversity {
+    vertical-align: top;
+    .field--name-body {
+      border-right-color: $white;
+      margin-top: 14px;
+    }
   }
   .block-logo svg {
     height: 44px;
