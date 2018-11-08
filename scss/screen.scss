@@ -246,13 +246,13 @@ body.queenslaw-sub-site #header {
       width: auto;
     }
   }
-  .block-queensuniversity {
+  .block-queensuniversity .field--name-body {
     border-right: 2px solid $blue;
     padding-right: 20px;
   }
   .block-logo svg {
-    height: 44px;
-    padding-top: 14px;
+    height: 30px;
+    padding-top: 0;
   }
   div + .block-logo {
     padding-left: 20px;
@@ -262,12 +262,15 @@ body.queenslaw-sub-site #header {
     font-weight: 600;
   }
 }
-body.queenslaw-main-site #branding .block-logo svg {
-  height: 30px;
-  padding-top: 0;
-}
-body.queenslaw-sub-site #branding .block-queensuniversity {
-  border-right-color: $white;
+body.queenslaw-sub-site #branding {
+  .block-queensuniversity .field--name-body {
+    border-right-color: $white;
+    padding-top: 14px;
+  }
+  .block-logo svg {
+    height: 44px;
+    padding-top: 14px;
+  }
 }
 #header .header-content {
   display: table-cell;
