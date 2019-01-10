@@ -1378,6 +1378,13 @@ body.queenslaw-main-site.front #block-queenslaw-local-tasks {
   position: relative;
   z-index: 1;
 }
+body.page-queenslawportal {
+  .queenslaw-teasers {
+    h3 {
+      text-align: center;
+    }
+  }
+}
 .node--view-mode-full,
 .views-element-container {
   /* change the font size for tr rather than table so as not to impact caption */
@@ -1945,11 +1952,6 @@ input.form-submit {
     display: block;
     width: 100%;
     height: auto;
-  }
-  .page-master-events-calendar {
-    h3 {
-      text-align: center;
-    }
   }
   h3 + footer {
     margin: -12px 0 16px 0;
