@@ -167,7 +167,8 @@ body.queenslaw-main-site.front {
       float: none;
     }
   }
-  .block-views-block-events-block {
+  .block-views-block-events-block,
+  .block-queenslaw-syndication.block-syndicatedeventblock {
     > div .fields:after {
       content: "";
       clear: both;
@@ -195,7 +196,8 @@ body.queenslaw-main-site.front {
       left: 0;
       box-shadow: inset 0 0 0 1000px rgba(255,255,255,.70);
     }
-    .views-row:nth-child(even) .fields > div {
+    .views-row:nth-child(even) .fields > div,
+    .queenslaw-event:nth-child(even) .fields > div {
       padding-left: 0;
     }
   }

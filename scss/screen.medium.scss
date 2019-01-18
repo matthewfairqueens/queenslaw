@@ -189,7 +189,8 @@ select {
   }
 }
 #main {
-  .block-views-block-events-block {
+  .block-views-block-events-block
+  .block-queenslaw-syndication.block-syndicatedeventblock {
     .feature-image,
     .teaser-image {
       width: 50%;

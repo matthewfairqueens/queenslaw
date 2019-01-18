@@ -594,6 +594,7 @@ body.submenu-visible #block-calendar-subnavigation {
 #supercontent .block-views-block-features-block,
 #supercontent .block-views-block-stories-front-block,
 #main .block-views-block-events-block,
+#main .block-queenslaw-syndication.block-syndicatedeventblock,
 #main .block-views-block-events-block-portal,
 #main .block-views-block-events-block-alumni,
 #main .block-views-block-events-block-speakers,
@@ -674,6 +675,7 @@ body.submenu-visible #block-calendar-subnavigation {
 }
 #supercontent .block-views-block-stories-front-block,
 #main .block-views-block-events-block,
+#main .block-queenslaw-syndication.block-syndicatedeventblock,
 #main .block-views-block-events-block-portal,
 #main .block-views-block-events-block-alumni,
 #main .block-views-block-events-block-speakers,
@@ -692,7 +694,8 @@ body.submenu-visible #block-calendar-subnavigation {
     color: $black;
   }
   > div {
-    .views-row + .views-row {
+    .views-row + .views-row,
+    .queenslaw-event + .queenslaw-event {
       display: block;
     }
     .fields {
@@ -724,6 +727,7 @@ body.submenu-visible #block-calendar-subnavigation {
   }
 }
 #main .block-views-block-events-block,
+#main .block-queenslaw-syndication.block-syndicatedeventblock,
 #main .block-views-block-events-block-portal,
 #main .block-views-block-events-block-alumni,
 #main .block-views-block-events-block-speakers,
@@ -794,6 +798,7 @@ body.submenu-visible #block-calendar-subnavigation {
   }
 }
 #main .block-views-block-events-block .views-row:nth-child(even),
+#main .block-queenslaw-syndication.block-syndicatedeventblock .queenslaw-event:nth-child(even),
 #main .block-views-block-events-block-portal .views-row:nth-child(even),
 #main .block-views-block-events-block-alumni .views-row:nth-child(even),
 #main .block-views-block-events-block-speakers .views-row:nth-child(even),
@@ -810,6 +815,7 @@ body.submenu-visible #block-calendar-subnavigation {
 .queenslaw-teasers,
 .block-views-block-stories-front-block,
 .block-views-block-events-block,
+.block-queenslaw-syndication.block-syndicatedeventblock,
 .block-views-block-events-block-portal,
 .block-views-block-events-block-alumni,
 .block-views-block-events-block-speakers,
@@ -1139,6 +1145,7 @@ body.landing-page-directory #main .view-people,
 }
 body.queenslaw-main-site.front .content-container,
 body.queenslaw-main-site.landing-page-events .content-container,
+body.queenslaw-sub-site.queenslaw-syndicated-events .content-container,
 body.queenslaw-main-site.path-alumni-queens-law-portal-master-events-calendar .content-container,
 body.queenslaw-main-site.path-alumni-alumni-events .content-container,
 body.queenslaw-main-site.path-research-visiting-speakers .content-container,
@@ -1331,6 +1338,7 @@ body.sidebar-first #main {
 }
 body.queenslaw-main-site.front #main,
 body.queenslaw-main-site.landing-page-events #main,
+body.queenslaw-sub-site.queenslaw-syndicated-events #main,
 body.queenslaw-main-site.path-alumni-queens-law-portal-master-events-calendar #main,
 body.queenslaw-main-site.path-alumni-alumni-events #main,
 body.queenslaw-main-site.path-research-visiting-speakers #main,
