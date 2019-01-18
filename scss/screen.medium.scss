@@ -189,7 +189,7 @@ select {
   }
 }
 #main {
-  .block-views-block-events-block
+  .block-views-block-events-block,
   .block-queenslaw-syndication.block-syndicatedeventblock {
     .feature-image,
     .teaser-image {
@@ -199,6 +199,12 @@ select {
     > div .fields > div {
       padding-left: 0;
       padding-right: 50%;
+    }
+    .views-row:nth-child(even),
+    .queenslaw-event:nth-child(even) {
+      .fields > div {
+        padding-left: 50%;
+      }
     }
   }
   .block-views-block-events-block-alumni {
