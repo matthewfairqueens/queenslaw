@@ -2420,3 +2420,53 @@ body.sidebar-first .block-queenslaw-people {
     display: none;
   }
 }
+
+.callOutBoxOuterWrapper {
+  clear: both;
+    box-sizing: border-box;
+    &.-left {
+      width: 50%;
+      float: left;
+      .callOutBox {
+        margin: 20px 40px 25px 0;    
+      }
+    }
+    &.-full {
+      width: 100%;
+      .callOutBox {
+        margin: 20px 0 25px 0;   
+      }
+    }
+    &.-right {
+      width: 50%;
+      float: right;
+      .callOutBox {
+        margin: 20px 0 25px 40px;    
+      }
+    }
+    .callOutBox {
+      background-color: #EEE;
+      border-bottom: 2px solid rgba(0,0,0,0.2);
+      box-shadow: 1px 10px 25px -12px #000;
+      h1 {
+        font-size: 1.7em !important;
+        border-left: 7px solid #00305E;
+        padding: 30px;
+      }
+      .callOutBoxFooter {
+        margin: 10px 0 0 0;
+      }
+      .callOutBoxInnerWrapper {
+        padding: 5px 40px 20px 40px;
+        dt {
+          font-weight: 600;
+        }
+        dd {
+          font-size: 0.85em;
+        }
+      }
+    }
+}
+.fas {
+  font-family: "FontAwesome";
+}
