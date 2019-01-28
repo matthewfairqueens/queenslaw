@@ -2448,10 +2448,16 @@ body.sidebar-first .block-queenslaw-people {
       background-color: #EEE;
       border-bottom: 2px solid rgba(0,0,0,0.2);
       box-shadow: 1px 10px 25px -12px #000;
+      overflow: auto;
       h1 {
         font-size: 1.7em !important;
         border-left: 7px solid #00305E;
         padding: 30px;
+      }
+      img {
+        float: left;
+        width: 30%;
+        margin: 0 30px 30px 0;
       }
       .callOutBoxFooter {
         margin: 10px 0 0 0;
