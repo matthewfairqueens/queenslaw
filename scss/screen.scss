@@ -2584,3 +2584,42 @@ a.button {
       padding-right: 2.5%;
     }
 }
+
+.quoteWrapper {
+  margin: 35px 10%;
+  .quote {
+    position: relative;
+    padding: 40px 80px 0 80px;
+    &:nth-child(n+2) {
+      margin-top: -20px;
+    }
+    &:nth-last-child(1) {
+      padding: 40px 80px;
+    }
+    &:before {
+      position: absolute;
+      font-family: 'FontAwesome';
+      top: 0;
+      left: 20px;
+      content: "\f10d";
+      font-size: 2.5em;
+    }
+    &:nth-child(n+2):before {
+      top: 20px;
+      left: 30px;
+      font-size: 1.5em;
+    }
+    &:nth-last-child(1):after {
+      position: absolute;
+      font-family: 'FontAwesome';
+      bottom: 0;
+      right: 30px;
+      content: "\f10e";
+      font-size: 2.5em;
+    }
+  }
+  .quotebyline {
+    text-align: right;
+    padding: 0 80px;
+  }
+}
