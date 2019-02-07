@@ -28,7 +28,7 @@ select {
 }
 #header {
   > div {
-    min-width: auto;
+    min-width: 0;
     width: auto;
     #branding {
       margin-top: -20px;
