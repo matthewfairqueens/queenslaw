@@ -2647,3 +2647,81 @@ a.button {
     padding: 0 80px;
   }
 }
+
+.attention {
+  margin: 18px 0;
+  background: no-repeat 10px 17px;
+  border: 1px solid;
+  border-width: 1px 1px 1px 0;
+  border-radius: 2px;
+  padding: 30px 30px 30px 90px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  color: #333;
+  background-color: #EEE;
+  box-shadow: -8px 0 0 0 #333;
+  position: relative;
+  &::before {
+  margin: 25px 30px;
+  font-size: 1.4em;
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 900;
+  display: block;
+  width: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: center;
+  content: "\f0c8";
+  }
+  &.-note {
+    color: #000044;
+    background-color: #F3F9FF;
+    box-shadow:-8px 0 0 0 #113355;
+    border-color: #113355;
+    &::before {
+      content: "\f024";
+      color: #113355;
+    }
+  }
+  &.-good {
+    color: #004400;
+    background-color: #CCFFCC;
+    box-shadow:-8px 0 0 0 #448844;
+    border-color: #448844;
+    &::before {
+      content: "\f2f7";
+      color: #448844;
+    }
+  }
+  &.-warning {
+    color: #444400;
+    background-color: #FFFFDD;
+    box-shadow:-8px 0 0 0 #DDDD00;
+    border-color: #DDDD00;
+    &::before {
+      content: "\f071";
+      color: #DDDD00;
+    }
+  }
+  &.-important {
+    color: #442500;
+    background-color: #ffefe2;
+    box-shadow:-8px 0 0 0 #FF9900;
+    border-color: #FF9900;
+    &::before {
+      content: "\f12a";
+      color: #FF9900;
+    }
+  }
+  &.-critical {
+    color: #440000;
+    background-color: #FFEEEE;
+    box-shadow:-8px 0 0 0 #FF0000;
+    border-color: #FF0000;
+    &::before {
+      content: "\f306";
+      color: #FF0000;
+    }
+  }
+}
