@@ -17,7 +17,7 @@ global:
     jquery.menu.js: {}
     jquery.misc.js: {}
     jquery.responsive.js: {}
-    packery.pkgd.min.js: {}
+    isotope.pkgd.min.js: {}
   # Adding pi_base/global as a dependency ensures that sub-themes of this sub-theme load
   # resources in the right order; without this, I was seeing queenslaw then pi_base then
   # sub-sub-theme, this ensures pi_base then queenslaw then sub-sub-theme.
