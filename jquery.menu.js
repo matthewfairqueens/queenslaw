@@ -32,14 +32,6 @@
     //   }});
     //   event.preventDefault();
     // });
-    // $('body.queenslaw-main-site.standard-screen #block-mainnavigation .submenu-close').click(function(event){
-    //   //$('#block-mainnavigation li.submenu-active div div.submenu-top').hide('blind');
-    //   $('#block-mainnavigation li').removeClass('submenu-active');
-    //   $('body').removeClass('submenu-visible');
-    //   $('#subheader').css('top', '0');
-    //   event.preventDefault();
-    // });
-
     $('body.queenslaw-main-site.standard-screen #block-mainnavigation a.submenu-trigger').click(function(event){
       if ($(this).parents('li').hasClass('submenu-active')) {
         $('#block-mainnavigation li').removeClass('submenu-active');
@@ -57,6 +49,14 @@
         event.preventDefault();
       }
     });
+
+     // $('body.queenslaw-main-site.standard-screen #block-mainnavigation .submenu-close').click(function(event){
+    //   //$('#block-mainnavigation li.submenu-active div div.submenu-top').hide('blind');
+    //   $('#block-mainnavigation li').removeClass('submenu-active');
+    //   $('body').removeClass('submenu-visible');
+    //   $('#subheader').css('top', '0');
+    //   event.preventDefault();
+    // });
     $('body.queenslaw-main-site.standard-screen #block-mainnavigation .submenu-close').click(function(event){
       $('#block-mainnavigation li').removeClass('submenu-active');
       $('body').removeClass('submenu-visible');
@@ -64,7 +64,7 @@
       event.preventDefault();
     });
 
-    
+
     $('#block-subsubsection-navigation, #block-secondary-subnavigation, #block-calendar-subnavigation').addClass('queenslaw-quick-nav');
     $('body.queenslaw-main-site.standard-screen .queenslaw-quick-nav > h2').prepend('<a href="#quick-nav-toggle" class="quick-nav-toggle">Open</a>');
     $('body.queenslaw-main-site.standard-screen .queenslaw-quick-nav .quick-nav-toggle').click(function(event){
