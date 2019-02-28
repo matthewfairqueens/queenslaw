@@ -9,6 +9,37 @@
     $(window).resize(function() {
       setSubmenPosition();
     });
+
+    // $('body.queenslaw-main-site.standard-screen #block-mainnavigation a.submenu-trigger').click(function(event){
+      
+    //   $('#block-mainnavigation li div div.submenu-top').hide({effect:'blind'});
+    //   if ($(this).parents('li').hasClass('submenu-active')) {
+    //     $('#subheader').css('top', '0');
+    //     $('#block-mainnavigation li').removeClass('submenu-active');
+    //     $('body').removeClass('submenu-visible');
+        
+    //   }
+    //   else {
+    //     $('#block-mainnavigation li').removeClass('submenu-active');
+    //     $(this).parents('li').addClass('submenu-active');
+    //     $('body').addClass('submenu-visible');
+    //   }
+    //   thisMenu = $(this);
+    //   $('#block-mainnavigation li.submenu-active div div.submenu-top').show({effect:'blind',complete:function(){
+    //     submenu_offset = thisMenu.siblings('.submenu-top').offset();
+    //     submenu_height = thisMenu.siblings('.submenu-top').outerHeight();
+    //     $('#subheader').css('top', submenu_offset.top + submenu_height + 'px');
+    //   }});
+    //   event.preventDefault();
+    // });
+    // $('body.queenslaw-main-site.standard-screen #block-mainnavigation .submenu-close').click(function(event){
+    //   //$('#block-mainnavigation li.submenu-active div div.submenu-top').hide('blind');
+    //   $('#block-mainnavigation li').removeClass('submenu-active');
+    //   $('body').removeClass('submenu-visible');
+    //   $('#subheader').css('top', '0');
+    //   event.preventDefault();
+    // });
+
     $('body.queenslaw-main-site.standard-screen #block-mainnavigation a.submenu-trigger').click(function(event){
       if ($(this).parents('li').hasClass('submenu-active')) {
         $('#block-mainnavigation li').removeClass('submenu-active');
@@ -32,6 +63,8 @@
       $('#subheader').css('top', '0');
       event.preventDefault();
     });
+
+    
     $('#block-subsubsection-navigation, #block-secondary-subnavigation, #block-calendar-subnavigation').addClass('queenslaw-quick-nav');
     $('body.queenslaw-main-site.standard-screen .queenslaw-quick-nav > h2').prepend('<a href="#quick-nav-toggle" class="quick-nav-toggle">Open</a>');
     $('body.queenslaw-main-site.standard-screen .queenslaw-quick-nav .quick-nav-toggle').click(function(event){

@@ -25,3 +25,4 @@ global:
   # sub-sub-theme, this ensures pi_base then queenslaw then sub-sub-theme.
   dependencies:
     - pi_base/global
+    - core/jquery.ui.effects.blind
