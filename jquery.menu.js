@@ -53,7 +53,7 @@
      $('body.queenslaw-main-site.standard-screen #block-mainnavigation .submenu-close').click(function(event){
       //$('#block-mainnavigation li.submenu-active div div.submenu-top').hide('blind');
       $('#block-mainnavigation li').removeClass('submenu-active');
-      $('body').removeClass('submenu-visible');
+      setTimeout("$('body').removeClass('submenu-visible');", 1000);
       $('#subheader').css('top', '0');
       event.preventDefault();
     });
