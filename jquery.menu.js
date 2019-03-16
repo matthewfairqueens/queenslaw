@@ -12,19 +12,19 @@
 
     $('body.queenslaw-main-site.standard-screen #block-mainnavigation a.submenu-trigger').click(function(event){
       $('#block-mainnavigation li div div.submenu-top').hide({effect:'blind'});
-      
-      if ($(this).parents('li').hasClass('submenu-active')) {
-        
-        $('#subheader').css('top', '0');
-        $('#block-mainnavigation li').removeClass('submenu-active');
-        $('body').removeClass('submenu-visible');
-        
-      }
-      else {
-        $('#block-mainnavigation li').removeClass('submenu-active');
-        $(this).parents('li').addClass('submenu-active');
-        $('body').addClass('submenu-visible');
-      }
+      setTimeout(" \
+      if ($(this).parents('li').hasClass('submenu-active')) { \
+         \
+        $('#subheader').css('top', '0'); \
+        $('#block-mainnavigation li').removeClass('submenu-active'); \
+        $('body').removeClass('submenu-visible'); \
+        \
+      } \
+      else { \
+        $('#block-mainnavigation li').removeClass('submenu-active'); \
+        $(this).parents('li').addClass('submenu-active'); \
+        $('body').addClass('submenu-visible'); \
+      } ", 1000);
       thisMenu = $(this);
       $('#block-mainnavigation li.submenu-active div div.submenu-top').show({effect:'blind',complete:function(){
         submenu_offset = thisMenu.siblings('.submenu-top').offset();
