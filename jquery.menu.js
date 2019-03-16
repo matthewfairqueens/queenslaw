@@ -15,8 +15,8 @@
       
       if ($(this).parents('li').hasClass('submenu-active')) {
         $('#block-mainnavigation li div div.submenu-top').hide({effect:'blind'});
-        setTimeout("$('#subheader').css('top', '0');",1000);
-        setTimeout("$('#block-mainnavigation li').removeClass('submenu-active');",1000);
+        $('#subheader').css('top', '0');
+        $('#block-mainnavigation li').removeClass('submenu-active');
         $('body').removeClass('submenu-visible');
         
       }
