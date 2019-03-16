@@ -12,8 +12,9 @@
 
     $('body.queenslaw-main-site.standard-screen #block-mainnavigation a.submenu-trigger').click(function(event){
       
-      $('#block-mainnavigation li div div.submenu-top').hide({effect:'blind'});
+      
       if ($(this).parents('li').hasClass('submenu-active')) {
+        $('#block-mainnavigation li div div.submenu-top').hide({effect:'blind'});
         $('#subheader').css('top', '0');
         $('#block-mainnavigation li').removeClass('submenu-active');
         $('body').removeClass('submenu-visible');
