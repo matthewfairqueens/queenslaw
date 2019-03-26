@@ -1849,9 +1849,6 @@ body.page-node-type-story #sidebar {
   .field--name-field-social-media {
     margin-top: 8px;
   }
-  .field--name-field-email {
-    display: none;
-  }
 }
 .node--view-mode-alternate-teaser {
   .field {
@@ -2369,6 +2366,9 @@ body.sidebar-first .block-queenslaw-people {
       padding-right: 20px;
       width: 50%;
       float: left;
+    }
+    .field--name-field-email {
+      display: none;
     }
   }
   .block-queensuniversitylogo {
