@@ -3,7 +3,7 @@
     var subitem_count = 0;
     $('body.queenslaw-main-site.standard-screen #block-mainnavigation > ul > li.menu-item--expanded > .menu-item-content').each(function(){
       $(this).children('a').addClass('submenu-trigger');
-      $(this).children('.submenu').addClass('submenu-top').append('<a href="#submenu-close" class="submenu-close"><span>Close</span></a>');
+      $(this).children('.submenu').addClass('submenu-top').append('<a class="submenu-close"><span>Close</span></a>');
     });
     setSubmenPosition();
     $(window).resize(function() {
