@@ -167,7 +167,7 @@ a.mappin:before {
           border-right: 1px solid $white;
           padding-right: 0.5em;
           font-weight: $bold-font-weight;
-          text-transform: uppercase;
+          
           color: $yellow;
         }
         a {
@@ -627,7 +627,7 @@ body.submenu-visible #block-calendar-subnavigation {
     font-size: 1.5em;
     font-weight: $bold-font-weight;
     line-height: 1.125;
-    text-transform: uppercase;
+    
   }
   a {
     color: $white;
@@ -732,7 +732,7 @@ body.submenu-visible #block-calendar-subnavigation {
     font-size: 0.875em;
     line-height: 1;
     text-align: center;
-    text-transform: uppercase;
+    
     span.day {
       display: block;
       position: relative;
@@ -762,7 +762,7 @@ body.submenu-visible #block-calendar-subnavigation {
   color: $white;
   h3 {
     font-weight: $bold-font-weight;
-    text-transform: uppercase;
+    
     a {
       font-weight: $bold-font-weight;
     }
@@ -792,7 +792,7 @@ body.submenu-visible #block-calendar-subnavigation {
   background-color: transparent;
   color: $dark-grey;
   h3 {
-    text-transform: uppercase;
+    
   }
   a {
     color: $dark-grey;
@@ -1009,7 +1009,7 @@ body.landing-page-directory #main .view-people,
     margin-bottom: 4px;
     font-size: 2em;
     font-weight: $bold-font-weight;
-    text-transform: uppercase;
+    
     line-height: 1.125;
   }
   .views-field-field-degree {
@@ -1494,7 +1494,7 @@ body.page-node-type-story #sidebar footer {
         h3 {
           margin: 0;
           font-weight: $bold-font-weight;
-          text-transform: uppercase;
+          
           a {
             font-weight: $bold-font-weight;
           }
@@ -1611,7 +1611,7 @@ body.page-node-type-story #sidebar footer {
     margin-bottom: 8px;
     font-size: 2.4em;
     font-weight: $bold-font-weight;
-    text-transform: uppercase;
+    
     line-height: 1.125;
   }
   p,
@@ -1653,7 +1653,7 @@ body.page-node-type-story #sidebar footer {
     font-size: 1.71428571em;
     font-weight: $bold-font-weight;
     line-height: 1.125;
-    text-transform: uppercase;
+    
   }
   h3,
   .view-details .attachment-after header h3,
@@ -1663,7 +1663,7 @@ body.page-node-type-story #sidebar footer {
     padding-top: 12px;
     font-size: 1.28571429em;
     font-weight: $bold-font-weight;
-    text-transform: uppercase;
+    
   }
   .view-details header h3,
   .field--name-field-code {
@@ -1998,7 +1998,7 @@ body.has-queenslaw-alternate-teasers #main .queenslaw-teasers {
   margin: 0;
   color: $white;
   h3 {
-    text-transform: uppercase;
+    
   }
   a {
     color: $white;
@@ -2257,7 +2257,7 @@ body.landing-page-directory .view-people,
       font-size: 1.75em;
       font-weight: $bold-font-weight;
       line-height: 1.125;
-      text-transform: uppercase;
+      
     }
     .views-row:nth-child(2n + 1) {
       clear: none;
@@ -2367,7 +2367,7 @@ body.sidebar-first .block-queenslaw-people {
   h2 {
     font-size: 1.125em;
     font-weight: $bold-font-weight;
-    text-transform: uppercase;
+    
   }
   .block-type-contact,
   .block-facultyoflaw {
