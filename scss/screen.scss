@@ -58,6 +58,10 @@ a {
   color: $grey;
 }
 
+#superheader a, #header a, #subheader a, #footer a {
+  text-decoration: none;
+}
+
 a.mappin:before {
   content: '\f5a0';
   font-family: "Font Awesome 5 Pro";
