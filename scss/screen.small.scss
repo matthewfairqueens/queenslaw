@@ -467,3 +467,10 @@ body.queenslaw-main-site.page-programs-jd {
     }
   }
 }
+
+.queenslaw-video-container {
+  &.-half {
+    width: 100%;
+    padding-bottom: 56.25%;
+  }
+}
