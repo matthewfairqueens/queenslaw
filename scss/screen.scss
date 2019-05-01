@@ -54,11 +54,11 @@ strong {
   font-weight: $bold-font-weight;
 }
 a {
-  font-weight: $font-weight;
+  font-weight: bold;
   color: $grey;
 }
 
-#superheader a, #header a, #subheader a, #footer a {
+body.front a, #superheader a, #header a, #subheader a, #footer a {
   text-decoration: none;
 }
 
