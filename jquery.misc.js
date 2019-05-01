@@ -1,7 +1,7 @@
 (function ($){
   $(document).ready(function(){
     // wrap videos in body fields
-    $('#content .node .field--name-body iframe[src*="youtube"]').wrap('<div class="queenslaw-video-container"></div>');
+    $('#content .node .field--name-body iframe[src*="youtube"]').wrap('<div></div>').parent().attr('class', 'queenslaw-video-container ' + $('#content .node .field--name-body iframe[src*="youtube"]').attr('class'));
     // add parallax effect to the "Sir John A. Macdonald Hall" block
     $('.block-sirjohnamacdonaldhall').each(function(){
       var background_image = $(this).css('background-image');

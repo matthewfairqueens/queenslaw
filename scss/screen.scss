@@ -2354,6 +2354,18 @@ body.sidebar-first .block-queenslaw-people {
   width: 100%;
   height: 0;
   overflow: hidden;
+  &.-half {
+    width: 50%;
+    padding-bottom: 28.25%;
+  }
+  &.-left {
+    float: left;
+    margin: 0 34px 24px 0;
+  }
+  &.-right {
+    float: right;
+    margin: 0 0 24px 34px;
+  }
 }
 .queenslaw-video-container iframe {
   position: absolute;
