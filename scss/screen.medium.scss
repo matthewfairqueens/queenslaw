@@ -428,5 +428,15 @@ img.parallax-slider {
   margin: 35px 5%;
   .quote {
     font-size: 1.3em;
+    padding: 40px 40px 0 40px;
+    &:nth-last-child(1) {
+      padding: 40px 40px;
+    }
+    &:before {
+      left: 10px;
+    }
+    &:nth-last-child(1):after {
+      right: 15px;
+    }
   }
 }
