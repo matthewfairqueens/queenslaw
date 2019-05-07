@@ -433,10 +433,10 @@ img.parallax-slider {
       padding: 40px 40px;
     }
     &:before {
-      left: 10px;
+      left: 0;
     }
     &:nth-last-child(1):after {
-      right: 15px;
+      right: 0;
     }
   }
 }
