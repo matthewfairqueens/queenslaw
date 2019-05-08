@@ -1216,7 +1216,17 @@ body.has-queenslaw-alternate-teasers .content-container {
   }
   figure {
     margin: 24px 24px 24px 0;
-    width: 48%;
+    width: 38%;
+    &.align-right {
+      margin: 0 0 16px 30px;
+    }
+    &.align-left {
+      margin: 0 30px 16px 0;
+    }
+    img {
+      width: 100%;
+      height: none;
+    }
     figcaption {
       border-bottom: 1px solid $light-grey;
       padding: 8px 27px 12px 0;

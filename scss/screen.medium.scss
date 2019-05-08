@@ -189,6 +189,25 @@ select {
   }
 }
 #main {
+  figure {
+    margin: 24px 24px 24px 24px;
+    width: 100%;
+    &.align-right {
+      margin: 24px;
+    }
+    &.align-left {
+      margin: 24px;
+    }
+    img {
+      width: 100%;
+      height: none;
+    }
+    figcaption {
+      border-bottom: 1px solid $light-grey;
+      padding: 8px 27px 12px 0;
+      font-size: 0.875em;
+    }
+  }
   .block-views-block-events-block,
   .block-queenslaw-syndication.block-syndicatedeventblock {
     .feature-image,
