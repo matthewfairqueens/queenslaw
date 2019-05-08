@@ -192,13 +192,13 @@ select {
 }
 #main {
   figure {
-    margin: 24px 24px 24px 24px;
+    margin: 0;
     width: 100%;
     &.align-right {
-      margin: 24px;
+      margin: 0;
     }
     &.align-left {
-      margin: 24px;
+      margin: 0;
     }
     img {
       width: 100%;
