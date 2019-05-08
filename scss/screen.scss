@@ -2529,6 +2529,11 @@ field--name-field-teaching-and-research {
       float: left;
       width: 30%;
       margin: 0 30px 30px 0;
+      &.-fullwidth {
+        width: 100%;
+        float: none;
+        margin: 0 0 30px 0;
+      }
     }
     .callOutBoxFooter {
       margin: 10px 0 0 0;
