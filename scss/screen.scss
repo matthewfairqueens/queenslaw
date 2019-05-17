@@ -39,6 +39,9 @@ $orange: #de7736;
   visibility: hidden;
 }
 
+@import 'slick';
+@import 'slick-theme';
+
 body {
   background-color: $black;
   min-width: $min-width;
