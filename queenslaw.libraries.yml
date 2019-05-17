@@ -4,6 +4,7 @@ global:
     theme:
       https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css: {type: external}
       https://pro.fontawesome.com/releases/v5.7.1/css/all.css: {type: external}
+      https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css: {type: external}
       css/screen.css: {media: screen}
       css/screen.medium.css: {media: screen and (max-width: 959px)}
       css/screen.small.css: {media: screen and (max-width: 639px)}
@@ -20,6 +21,7 @@ global:
     isotope.pkgd.min.js: {}
     packery-mode.pkgd.min.js: {}
     imagesloaded.pkgd.min.js: {}
+    https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js: {type: external}
   # Adding pi_base/global as a dependency ensures that sub-themes of this sub-theme load
   # resources in the right order; without this, I was seeing queenslaw then pi_base then
   # sub-sub-theme, this ensures pi_base then queenslaw then sub-sub-theme.
