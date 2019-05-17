@@ -42,6 +42,24 @@ $orange: #de7736;
 @import 'slick.scss';
 @import 'slick-theme.scss';
 
+#main ul.slick-dots li {
+  list-style-type: disc;
+  &:before {
+  content: '';
+  margin: 0;
+  }
+}
+
+.slick-prev, .slick-next {
+  &:before {
+    color: #333;
+  }
+}
+
+.slick-dots {
+  margin-top: 30px;
+}
+
 body {
   background-color: $black;
   min-width: $min-width;
