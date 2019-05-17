@@ -39,8 +39,8 @@ $orange: #de7736;
   visibility: hidden;
 }
 
-@import 'slick';
-@import 'slick-theme';
+@import 'slick.scss';
+@import 'slick-theme.scss';
 
 body {
   background-color: $black;
