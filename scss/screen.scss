@@ -57,7 +57,16 @@ $orange: #de7736;
 }
 
 .slick-dots {
-  margin-top: 30px;
+  bottom: -45px;
+}
+
+.imgNameOverlay {
+  display: block;
+  background-color: $blue;
+  color: #FFF;
+  font-size: 1.3em;
+  text-align: right;
+  padding: 20px 30px;
 }
 
 body {
