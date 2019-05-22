@@ -69,6 +69,28 @@ $orange: #de7736;
   padding: 20px 30px;
 }
 
+.imgHeading {
+  display: block;
+  background-color: #33333344;
+  color: #FFF;
+  font-size: 1.3em;
+  padding: 20px 30px;
+  position: absolute;
+  bottom: 100px;
+  width: 100%;
+}
+
+.imgCaption {
+  display: block;
+  background-color: #00000033;
+  padding: 20px 30px;
+  position: absolute;
+  bottom: 0;
+  height: 60px;
+  width: 100%;
+  color: $white;
+}
+
 body {
   background-color: $black;
   min-width: $min-width;
