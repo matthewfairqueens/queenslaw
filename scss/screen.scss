@@ -437,6 +437,9 @@ body.queenslaw-sub-site #branding {
   .submenu-active .submenu-top {
     display: block;
   }
+  .submenu-top .menu-item--combined-degrees .submenu {
+    display: none;
+  }
   .submenu-close {
     position: absolute;
     right: 40px;
