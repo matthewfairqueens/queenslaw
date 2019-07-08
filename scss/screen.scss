@@ -566,7 +566,7 @@ body.queenslaw-sub-site #block-mainnavigation {
     color: $dark-grey;
   }
   .block-queenslaw-breadcrumbs {
-    padding: 0 0;
+    padding: 0 10px;
     li {
       display: inline;
       + li:before {
@@ -586,13 +586,13 @@ body.submenu-visible #subheader {
   left: 0;
 }
 #subheader .quick-nav-active + .block-queenslaw-breadcrumbs {
-  padding-left: 0;
+  padding-left: 10px;
 }
 
 #block-subsubsection-navigation + .block-queenslaw-breadcrumbs ol,
 #block-secondary-subnavigation + .block-queenslaw-breadcrumbs ol,
 #block-calendar-subnavigation + .block-queenslaw-breadcrumbs ol {
-  padding-left: 0;
+  padding-left: 10px;
 }
 #block-subsubsection-navigation.quick-nav-active,
 #block-secondary-subnavigation.quick-nav-active,
