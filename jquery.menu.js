@@ -73,12 +73,14 @@
         $(this).parents('.queenslaw-quick-nav').removeClass('quick-nav-active');
         $(this).text('Open');
         // $('#subheader').css('padding-left', '20px');
+        $('.queenslaw-quick-nav').attr('style','');
       }
       else {
         $(this).parents('.queenslaw-quick-nav').addClass('quick-nav-active');
         $(this).text('Close');
         var quick_nav_width = $(this).parents('.queenslaw-quick-nav').outerWidth();
         // $('#subheader').css('padding-left', quick_nav_width + 'px');
+        $('.quick-nav-active').css('top',$(window).scrollTop()+40+'px');
       }
       event.preventDefault();
     });
