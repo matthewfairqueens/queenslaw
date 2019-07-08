@@ -72,13 +72,13 @@
       if ($(this).parents('.queenslaw-quick-nav').hasClass('quick-nav-active')) {
         $(this).parents('.queenslaw-quick-nav').removeClass('quick-nav-active');
         $(this).text('Open');
-        $('#subheader').css('padding-left', '20px');
+        // $('#subheader').css('padding-left', '20px');
       }
       else {
         $(this).parents('.queenslaw-quick-nav').addClass('quick-nav-active');
         $(this).text('Close');
         var quick_nav_width = $(this).parents('.queenslaw-quick-nav').outerWidth();
-        $('#subheader').css('padding-left', quick_nav_width + 'px');
+        // $('#subheader').css('padding-left', quick_nav_width + 'px');
       }
       event.preventDefault();
     });
