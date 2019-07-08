@@ -71,12 +71,19 @@
     if ( $('.queenslaw-quick-nav ul').length < 1 ) {
       $('.queenslaw-quick-nav').remove();
     }
+    if ( $('#toolbar-administration').length > 0) {
+      $('.queenslaw-quick-nav').css('top','277px');
+    }
     $('body.queenslaw-main-site.standard-screen .queenslaw-quick-nav .quick-nav-toggle').click(function(event){
       if ($(this).parents('.queenslaw-quick-nav').hasClass('quick-nav-active')) {
         $(this).parents('.queenslaw-quick-nav').removeClass('quick-nav-active');
         $(this).text('Open');
         // $('#subheader').css('padding-left', '20px');
-        $('.queenslaw-quick-nav').attr('style','');
+        if ( $('#toolbar-administration').length > 0) {
+          $('.queenslaw-quick-nav').css('top','277px');
+        } else {
+          $('.queenslaw-quick-nav').css('top','198px');
+        }
       }
       else {
         $(this).parents('.queenslaw-quick-nav').addClass('quick-nav-active');
