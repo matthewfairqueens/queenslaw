@@ -156,6 +156,28 @@ a.mappin:before {
       font-size: 0.75em;
     }
   }
+  .block-queenslaw-gjj-backtoqueensuniversityfacultyoflaw {
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: $default-block-padding;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    min-width: $min-width;
+    text-align: right;
+    > div {
+      padding: $default-block-padding;
+    }
+    a {
+      font-weight: $bold-font-weight;
+      color: $red;
+    }
+    a:before {
+      content: '\f137';
+      margin-right: 0.5em;
+      font-family: FontAwesome;
+      font-size: 0.75em;
+    }
+  }
   .block-aprojectofqueensfacultyoflawandthesmithschoolofbusiness {
     box-sizing: border-box;
     margin: 0 auto;
