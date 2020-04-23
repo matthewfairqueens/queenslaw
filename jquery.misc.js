@@ -3,15 +3,18 @@
     // wrap videos in body fields
     $('#content .node .field--name-body iframe[src*="youtube"]').wrap('<div></div>').parent().attr('class', 'queenslaw-video-container ' + $('#content .node .field--name-body iframe[src*="youtube"]').attr('class'));
     // add parallax effect to the "Sir John A. Macdonald Hall" block
-    $('.block-sirjohnamacdonaldhall').each(function(){
-      var background_image = $(this).css('background-image');
-      background_image = /^url\((['"]?)(.*)\1\)$/.exec(background_image);
-      background_image = background_image ? background_image[2] : '';
-      $(this).addClass('parallax');
-      $(this).parallax({
-        imageSrc: background_image
+    function waitforParallax() {
+      $('.block-sirjohnamacdonaldhall').each(function(){
+        var background_image = $(this).css('background-image');
+        background_image = /^url\((['"]?)(.*)\1\)$/.exec(background_image);
+        background_image = background_image ? background_image[2] : '';
+        $(this).addClass('parallax');
+        $(this).parallax({
+         imageSrc: background_image
+        });
       });
-    });
+    }
+    setTimeout(waitforParallax, 3000);
     // add an arrow to home page features and stories
     $('body.queenslaw-main-site.front.standard-screen article.feature .fields > div > div, body.queenslaw-main-site.front.standard-screen article.story .fields > div > div').append('<div class="queenslaw-arrow"/>');
     // If any of these elements on the main site home page or events landing page contain
