@@ -2,3 +2,5 @@
 !.sass-cache/.gitkeep
 css/*
 !css/.gitkeep
+.DS_Store
+*/.DS_Store
