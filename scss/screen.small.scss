@@ -113,7 +113,8 @@ body.queenslaw-main-site.front {
       box-shadow: inset 0 0 0 1000px rgba(0,0,0,.65);
     }
   }
-  .block-views-block-stories-front-block {
+  .block-views-block-stories-front-block,
+  .block-views-block-stories-feature-block {
     > div .fields:after {
       content: "";
       clear: both;
@@ -151,6 +152,9 @@ body.queenslaw-main-site.front {
   .block-views-block-events-front-block {
     width: 100%;
   }
+}
+#supercontent .block-views-block-stories-feature-block .teaser-image {
+  box-shadow: inset 0 0 0 1000px rgba(0,0,0,.70);
 }
 #main {
   .block-highlights {

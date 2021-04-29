@@ -1,8 +1,8 @@
 (function($) {
   $(document).ready(function() {
-    if ($('.block-views-block-stories-front-block .views-row').length > 1) {
+    if (($('.block-views-block-stories-front-block .views-row').length > 1) || ($('.block-views-block-stories-feature-block .views-row').length > 1)) {
       $('body').addClass('dynamic-content');
-      $('body.standard-screen .block-views-block-stories-front-block, body.medium-screen .block-views-block-stories-front-block').addClass('stories-dynamic');
+      $('body.standard-screen .block-views-block-stories-front-block, body.medium-screen .block-views-block-stories-front-block, body.standard-screen .block-views-block-stories-feature-block, body.medium-screen .block-views-block-stories-feature-block').addClass('stories-dynamic');
       var event_nav = '<ul class="skip-nav">';
       $('.stories-dynamic .views-row').each(function(index){
         var count = index + 1;

@@ -694,6 +694,7 @@ body.submenu-visible #block-calendar-subnavigation {
 }
 #supercontent .block-views-block-features-block,
 #supercontent .block-views-block-stories-front-block,
+#supercontent .block-views-block-stories-feature-block,
 #main .block-views-block-events-block,
 #main .block-queenslaw-syndication.block-syndicatedeventblock,
 #main .block-views-block-events-block-portal,
@@ -760,6 +761,15 @@ body.submenu-visible #block-calendar-subnavigation {
     background-color: transparent;
   }
 }
+#supercontent .block-views-block-stories-feature-block {
+  > div .fields {
+    background-color: $blue;
+    color: $white;;
+    a {
+      color: $white;;
+    }
+  }
+}
 #main .block-views-block-speaker-events-front-block {
   h2 {
     margin: 0;
@@ -774,6 +784,7 @@ body.submenu-visible #block-calendar-subnavigation {
   margin: 0 0 16px 20px;
 }
 #supercontent .block-views-block-stories-front-block,
+#supercontent .block-views-block-stories-feature-block,
 #main .block-views-block-events-block,
 #main .block-queenslaw-syndication.block-syndicatedeventblock,
 #main .block-views-block-events-block-portal,
@@ -911,6 +922,7 @@ body.submenu-visible #block-calendar-subnavigation {
 }
 .queenslaw-teasers,
 .block-views-block-stories-front-block,
+.block-views-block-stories-feature-block,
 .block-views-block-events-block,
 .block-queenslaw-syndication.block-syndicatedeventblock,
 .block-views-block-events-block-portal,
@@ -942,6 +954,11 @@ body.submenu-visible #block-calendar-subnavigation {
       content: '+';
       margin-right: 20px;
     }
+  }
+}
+.block-views-block-stories-feature-block {
+  ul.links.inline li.node-readmore a {
+    border-color: $white;
   }
 }
 #main .queenslaw-teasers,
@@ -1481,7 +1498,8 @@ body.queenslaw-main-site.front .queenslaw-arrow {
   width: 0;
   height: 0;
 }
-body.queenslaw-main-site.front .block-views-block-stories-front-block .queenslaw-arrow {
+body.queenslaw-main-site.front .block-views-block-stories-front-block .queenslaw-arrow,
+body.queenslaw-main-site .block-views-block-stories-feature-block .queenslaw-arrow {
   right: 0;
   left: auto;
   margin-right: -32px;
